@@ -23,6 +23,11 @@ body {
   margin: 0 auto;
 }
 
+#theme-toggle:checked ~ body {
+  background-color: #000000;
+  color: #e9eaeb;
+}
+
 /*---Header---*/
 .header {
   width: 1440px;
