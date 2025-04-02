@@ -698,7 +698,7 @@ ul li a:hover {
   margin: auto;
   border-radius: 8px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-  color: #ffffff;
+  background-color: var(--hover-color);
 }
 
 .forth4 {
@@ -1137,7 +1137,7 @@ article header p {
   margin: auto;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  color: var(--category-text);
+  color: var(--hover-color);
 }
 
 .eighth2 {
