@@ -1252,19 +1252,56 @@ footer {
 }
 
 @media screen and (max-width: 599px) {
-  body {
+  body,
+  main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
     background-color: #53389e;
+  }
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  footer {
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1439px) {
-  body {
-    background-color: aqua;
+  * {
+    box-sizing: border-box;
   }
-}
 
-@media screen and (min-width: 1440px) {
   body {
-    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+
+  .header,
+  .headerInside,
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .first {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .viewOffice {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    left: 0;
+    width: 30%;
+    float: left;
+    flex-wrap: wrap;
   }
 }

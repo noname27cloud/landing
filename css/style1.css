@@ -323,6 +323,7 @@ main {
   color: #6941c6;
   text-wrap: nowrap;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .websites {
@@ -342,6 +343,7 @@ main {
   color: #717680;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .applications {
@@ -361,6 +363,7 @@ main {
   line-height: 24px;
   color: #717680;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .articlees {
