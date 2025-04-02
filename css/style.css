@@ -1275,33 +1275,74 @@ footer {
   }
 
   body {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-left: 0;
-  }
-
-  .header,
-  .headerInside,
-  nav {
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
+    align-items: flex-start;
   }
 
-  .first {
+  .headerInside {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: 110px;
   }
+
+  .title {
+    font-size: 45px;
+    line-height: 1.2;
+  }
+
+  .title,
+  .justP,
+  .buttons {
+    width: 55%;
+    height: auto;
+    margin: 0;
+  }
+
   .viewOffice {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    left: 0;
-    width: 30%;
-    float: left;
+    justify-content: center;
+    width: 40vw;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .second {
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .second1 {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .whoOur,
+  .we {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: auto;
+    margin-left: 210px;
+  }
+
+  .third {
+    width: auto;
+    gap: 24px;
+  }
+  .third figure {
+    width: 90%; /* 2 карточки в ряд */
   }
 }
