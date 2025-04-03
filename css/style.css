@@ -1460,9 +1460,7 @@ footer {
   body {
     padding: 0px;
     width: 100%;
-    /* width: 375px; */
     height: 7432px;
-    /* margin: auto; */
     isolation: isolate;
     position: relative;
   }
@@ -1471,7 +1469,7 @@ footer {
     height: 64px;
     padding: 0 16px;
     top: 0;
-    /* left: 0; */
+    left: 270px;
     z-index: 1000;
     width: 100%;
     margin: 0 auto;
@@ -1529,11 +1527,11 @@ footer {
     position: fixed;
     visibility: hidden;
     top: 72px;
-    right: -100%;
-    width: 100%;
+    /* right: -100%; */
+    /* width: 100%; */
     height: auto;
     margin: 0;
-    padding: 80px 0;
+    /* padding: 80px 0; */
     list-style: none;
     text-align: center;
     background-color: var(--surface);
@@ -1572,6 +1570,5 @@ footer {
   #menu__toggle:checked ~ .menu__box {
     visibility: visible;
     right: 0;
-    padding-left: 30%;
   }
 }
