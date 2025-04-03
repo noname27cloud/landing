@@ -6,30 +6,30 @@
 }
 
 :root {
-  --background-color: #ffffff;
-  --logo-text: #000000;
-  --primary-text: #181d27;
-  --secondary-text: #535862;
-  --accent: #7f56d9;
-  --light-bg: #fafafa;
-  --dark-bg: #53389e;
-  --category-text: #6941c6;
-  --hover-color: #6941c6;
-  --hover-color1: #fafafa;
-  --button-color: #7f56d9;
-  --project-info: #181d27;
+  --surface: #ffffff;
+  --brand-logo: #000000;
+  --text-primary: #181d27;
+  --text-secondary: #535862;
+  --theme-accent: #7f56d9;
+  --surface-light: #fafafa;
+  --surface-dark: #53389e;
+  --text-category: #6941c6;
+  --hover-highlight: #6941c6;
+  --hover-surface: #fafafa;
+  --button-primary: #7f56d9;
+  --text-info: #181d27;
 }
 
 /*dark zone*/
 :root:has(#toggle:checked) {
-  --background-color: #0c0e12;
-  --logo-text: #ffffff;
-  --primary-text: #ffffff;
-  --secondary-text: #94979c;
-  --light-bg: #13161b;
-  --hover-color1: #373a41;
-  --category-text: #cecfd2;
-  --project-info: #94979c;
+  --surface: #0c0e12;
+  --brand-logo: #ffffff;
+  --text-primary: #ffffff;
+  --text-secondary: #94979c;
+  --surface-light: #13161b;
+  --text-category: #cecfd2;
+  --hover-surface: #373a41;
+  --text-info: #94979c;
 }
 
 label {
@@ -76,8 +76,8 @@ body {
   padding: 0px;
   position: relative;
   align-items: center;
-  background-color: var(--background-color);
-  color: var(--primary-text);
+  background-color: var(--surface);
+  color: var(--text-primary);
   font-family: "Inter", sans-serif;
   font-style: normal;
   width: 1440px;
@@ -94,7 +94,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: var(--background-color);
+  background-color: var(--surface);
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -106,7 +106,7 @@ body {
   flex-direction: row;
   align-items: center;
   padding: 0px 32px;
-  background-color: var(--background-color);
+  background-color: var(--surface);
   height: 24px;
   width: 1280px;
   max-width: 1280px;
@@ -129,7 +129,7 @@ body {
   font-weight: 600;
   font-size: 24px;
   line-height: 24px;
-  color: var(--logo-text);
+  color: var(--brand-logo);
 }
 
 .icon1 img {
@@ -200,7 +200,7 @@ ul li:nth-child(5) {
 ul li a {
   text-decoration: none;
   font-weight: 600;
-  color: var(--secondary-text);
+  color: var(--text-secondary);
   display: flex;
   align-items: center;
   line-height: 24px;
@@ -260,7 +260,7 @@ ul li a:hover {
   font-size: 60px;
   letter-spacing: 1px;
   line-height: 72px;
-  color: var(--primary-text);
+  color: var(--text-primary);
   font-family: "Inter";
   font-style: normal;
   word-spacing: 0px;
@@ -278,7 +278,7 @@ ul li a:hover {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: var(--secondary-text);
+  color: var(--text-secondary);
 }
 
 .buttons {
@@ -295,7 +295,7 @@ ul li a:hover {
 
 .button1 {
   border: none;
-  background-color: var(--button-color);
+  background-color: var(--button-primary);
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
@@ -318,18 +318,18 @@ ul li a:hover {
 .button1:hover {
   margin: auto;
   border-radius: 8px;
-  background-color: var(--hover-color);
+  background-color: var(--hover-highlight);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
   /* color: wheat; */
 }
 
 .button2 {
   border: none;
-  background-color: var(--light-bg);
+  background-color: var(--surface-light);
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
-  color: var(--primary-text);
+  color: var(--text-primary);
   width: 120px;
   height: 60px;
   display: flex;
@@ -346,7 +346,7 @@ ul li a:hover {
   margin: auto;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
   /* color: white; */
-  background-color: var(--hover-color1);
+  background-color: var(--hover-surface);
 }
 
 .viewOffice {
@@ -368,7 +368,7 @@ ul li a:hover {
   padding: 110px 0px 0px 0px;
   width: 1440px;
   height: 788px;
-  background-color: var(--light-bg);
+  background-color: var(--surface-light);
   gap: 60px;
   word-spacing: 1px;
 }
@@ -393,7 +393,7 @@ ul li a:hover {
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  color: var(--category-text);
+  color: var(--text-category);
 }
 
 .our {
@@ -405,7 +405,7 @@ ul li a:hover {
   line-height: 44px;
   text-align: center;
   letter-spacing: -0.02em;
-  color: var(--primary-text);
+  color: var(--text-primary);
 }
 
 .whoOur {
@@ -425,7 +425,7 @@ ul li a:hover {
   font-size: 20px;
   line-height: 30px;
   text-align: center;
-  color: var(--secondary-text);
+  color: var(--text-secondary);
   text-wrap: balance;
 }
 
@@ -472,7 +472,7 @@ ul li a:hover {
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  color: var(--secondary-text);
+  color: var(--text-secondary);
 }
 
 /*Rating*/
@@ -483,7 +483,7 @@ ul li a:hover {
   align-items: center;
   width: 1440px;
   height: 640px;
-  background: var(--background-color);
+  background: var(--surface);
   margin-top: 12px;
 }
 
@@ -495,7 +495,7 @@ ul li a:hover {
   width: 1216px;
   max-width: 1216px;
   height: 448px;
-  background: var(--dark-bg);
+  background: var(--surface-dark);
   border-radius: 24px;
 }
 
@@ -585,7 +585,7 @@ ul li a:hover {
   gap: 64px;
   width: 1440px;
   height: 992px;
-  background: var(--background-color);
+  background: var(--surface);
 }
 
 .forth1 {
@@ -619,7 +619,7 @@ ul li a:hover {
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  color: var(--category-text);
+  color: var(--text-category);
 }
 
 .innov {
@@ -632,7 +632,7 @@ ul li a:hover {
   line-height: 44px;
   text-align: center;
   letter-spacing: -0.02em;
-  color: var(--primary-text);
+  color: var(--text-primary);
 }
 
 .explore {
@@ -644,7 +644,7 @@ ul li a:hover {
   font-size: 20px;
   line-height: 30px;
   text-align: center;
-  color: var(--secondary-text);
+  color: var(--text-secondary);
 }
 
 .forth3 {
@@ -674,7 +674,7 @@ ul li a:hover {
   cursor: pointer;
   box-sizing: border-box;
   border: none;
-  background-color: var(--button-color);
+  background-color: var(--button-primary);
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -698,7 +698,7 @@ ul li a:hover {
   margin: auto;
   border-radius: 8px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-  background-color: var(--hover-color);
+  background-color: var(--hover-highlight);
 }
 
 .forth4 {
@@ -761,7 +761,7 @@ article header h3 {
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: var(--category-text);
+  color: var(--text-category);
 }
 
 .hs {
@@ -782,7 +782,7 @@ article header h3 {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  color: var(--primary-text);
+  color: var(--text-primary);
   text-decoration: none;
 }
 
@@ -799,7 +799,7 @@ article header h3 {
 }
 
 .strike path {
-  stroke: var(--logo-text);
+  stroke: var(--brand-logo);
 }
 
 article header p {
@@ -810,7 +810,7 @@ article header p {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: var(--secondary-text);
+  color: var(--text-secondary);
 }
 
 .forth5 {
@@ -826,7 +826,7 @@ article header p {
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: var(--project-info);
+  color: var(--text-info);
 }
 
 .forth5 time {
@@ -835,7 +835,7 @@ article header p {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: var(--secondary-text);
+  color: var(--text-secondary);
 }
 
 .firstArticle .forth5 p {
@@ -877,7 +877,7 @@ article header p {
   gap: 64px;
   width: 1440px;
   height: 878px;
-  background: var(--background-color);
+  background: var(--surface);
 }
 
 .fifth1 {
@@ -902,7 +902,7 @@ article header p {
   line-height: 44px;
   text-align: center;
   letter-spacing: -0.02em;
-  color: var(--primary-text);
+  color: var(--text-primary);
   padding: 0px;
 }
 
@@ -915,7 +915,7 @@ article header p {
   font-size: 20px;
   line-height: 30px;
   text-align: center;
-  color: var(--secondary-text);
+  color: var(--text-secondary);
 }
 
 .sixth {
@@ -964,7 +964,7 @@ article header p {
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
-  color: var(--primary-text);
+  color: var(--text-primary);
 }
 
 .sixthSecond1 p {
@@ -975,7 +975,7 @@ article header p {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: var(--secondary-text);
+  color: var(--text-secondary);
 }
 
 .sixthSecond {
@@ -1003,7 +1003,7 @@ article header p {
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
-  color: var(--project-info);
+  color: var(--text-info);
 }
 
 .sixthSecond img {
@@ -1044,7 +1044,7 @@ article header p {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  color: var(--category-text);
+  color: var(--text-category);
 }
 
 .seventh1 {
@@ -1066,7 +1066,7 @@ article header p {
   font-size: 36px;
   line-height: 44px;
   letter-spacing: 0.5px;
-  color: var(--primary-text);
+  color: var(--text-primary);
 }
 
 .seventh p {
@@ -1077,7 +1077,7 @@ article header p {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: var(--secondary-text);
+  color: var(--text-secondary);
 }
 
 .eighth {
@@ -1101,7 +1101,7 @@ article header p {
   width: 286px;
   min-width: 280px;
   height: 290px;
-  background: var(--background-color);
+  background: var(--surface);
   border-radius: 0px;
 }
 
@@ -1122,7 +1122,7 @@ article header p {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  color: var(--category-text);
+  color: var(--text-category);
   display: flex;
   padding: 0px;
   text-decoration: none;
@@ -1130,14 +1130,14 @@ article header p {
 }
 
 .eighth p {
-  color: var(--secondary-text);
+  color: var(--text-secondary);
 }
 
 .eighth a:hover {
   margin: auto;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  color: var(--hover-color);
+  color: var(--hover-highlight);
 }
 
 .eighth2 {
