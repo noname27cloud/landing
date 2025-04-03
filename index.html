@@ -27,14 +27,19 @@
 
         <!-- Navigation -->
         <nav>
-          <ul>
+          <div class="burger-container">
+            <input type="checkbox" id="checkboxToggle" class="checkboxToggle" />
+            <label for="checkboxToggle" class="burger-label">
+              <div class="burger-icon"></div>
+            </label>
+          </div>
+          <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contacts</a></li>
             <li>
               <input type="checkbox" id="toggle" />
-              <!-- <div class="display"> -->
               <label for="toggle" class="changeTheme">
                 <!--Sun-->
                 <svg
@@ -68,7 +73,6 @@
                   />
                 </svg>
               </label>
-              <!-- </div> -->
             </li>
           </ul>
         </nav>

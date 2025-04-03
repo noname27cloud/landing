@@ -207,6 +207,90 @@ ul li a {
   width: 100%;
 }
 
+/* Стиль для контейнера меню */
+nav {
+  position: relative;
+}
+
+.burger-container {
+  display: none; /* Скрываем бургер на больших экранах */
+}
+
+/* Стили для бургер-иконки */
+.burger-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  position: relative;
+  transition: 0.3s;
+}
+
+.burger-icon:before,
+.burger-icon:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  transition: 0.3s;
+}
+
+.burger-icon:before {
+  top: -8px;
+}
+
+.burger-icon:after {
+  top: 8px;
+}
+
+/* При активном состоянии чекбокса (когда бургер-меню открыто) */
+.checkboxToggle:checked + .burger-label .burger-icon {
+  transform: rotate(45deg);
+}
+
+.checkboxToggle:checked + .burger-label .burger-icon:before {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.checkboxToggle:checked + .burger-label .burger-icon:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Стили для списка меню */
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.nav-links li {
+  padding: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+/* Скрытие меню на мобильных устройствах */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  position: absolute;
+  top: 60px; /* Позиция под бургером */
+  width: 100%;
+  left: 0;
+}
+
+/* Показ меню при активном чекбоксе */
+.checkboxToggle:checked ~ .nav-links {
+  display: flex;
+}
+
 ul li a:hover {
   margin: auto;
   border-radius: 8px;
@@ -925,6 +1009,7 @@ article header p {
   width: 768px;
   max-width: 768px;
   height: 528px;
+  position: relative;
 }
 
 .sixthFirst {
@@ -936,9 +1021,10 @@ article header p {
   height: 108px;
 }
 
-.sixthFirst img {
+.sixthFirst img,
+.sixthSecond img {
   position: absolute;
-  right: 336px;
+  right: 0px;
   padding: 0px;
   width: 24px;
   height: 26px;
@@ -1001,15 +1087,6 @@ article header p {
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
-  color: var(--text-info);
-}
-
-.sixthSecond img {
-  position: absolute;
-  right: 336px;
-  padding: 0px;
-  width: 24px;
-  height: 26px;
 }
 
 .seventh0 {
@@ -1020,7 +1097,6 @@ article header p {
   gap: 64px;
   width: 1440px;
   height: 676px;
-  background: var(--);
 }
 
 .seventh {
@@ -1249,24 +1325,6 @@ footer {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 599px) {
-  body,
-  main {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    background-color: #53389e;
-  }
-  nav ul {
-    flex-wrap: wrap;
-  }
-
-  footer {
-    width: 100%;
-  }
-}
-
 @media screen and (min-width: 600px) and (max-width: 1439px) {
   * {
     box-sizing: border-box;
@@ -1400,7 +1458,6 @@ footer {
     align-items: flex-start;
     flex-wrap: wrap;
     width: 50%;
-    margin-top: 70px;
     height: auto;
     margin-left: 20px;
   }
@@ -1411,20 +1468,105 @@ footer {
     align-items: flex-start;
     flex-wrap: wrap;
     width: 70%;
-    margin-left: 150px;
-    height: auto3.;
+    margin-left: 160px;
+    height: auto;
   }
 
   .forth4 {
     width: 70%;
-    gap: 24px;
     display: flex;
     height: auto;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: 100px;
     margin: auto 0;
     flex-wrap: wrap;
-    margin-top: 50px;
+  }
+
+  .viewButton {
+    width: 90%;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fifth {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 50%;
+    height: auto;
+    margin-left: 20px;
+    /* background-color: #cecfd2; */
+  }
+
+  .seventh0 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 50%;
+    height: auto;
+    margin-left: 20px;
+  }
+
+  .eighth {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+    height: auto;
+    margin-left: 20px;
+  }
+
+  footer,
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    /* overflow-x: hidden; */
+  }
+
+  body {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    overflow-x: hidden;
+    background-color: #cecfd2;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  .burger-container {
+    display: block; /* Показываем бургер на маленьких экранах */
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
   }
 }
