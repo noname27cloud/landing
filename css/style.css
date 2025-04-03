@@ -207,90 +207,6 @@ ul li a {
   width: 100%;
 }
 
-/* Стиль для контейнера меню */
-nav {
-  position: relative;
-}
-
-.burger-container {
-  display: none; /* Скрываем бургер на больших экранах */
-}
-
-/* Стили для бургер-иконки */
-.burger-icon {
-  width: 30px;
-  height: 3px;
-  background-color: #000;
-  position: relative;
-  transition: 0.3s;
-}
-
-.burger-icon:before,
-.burger-icon:after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 3px;
-  background-color: #000;
-  transition: 0.3s;
-}
-
-.burger-icon:before {
-  top: -8px;
-}
-
-.burger-icon:after {
-  top: 8px;
-}
-
-/* При активном состоянии чекбокса (когда бургер-меню открыто) */
-.checkboxToggle:checked + .burger-label .burger-icon {
-  transform: rotate(45deg);
-}
-
-.checkboxToggle:checked + .burger-label .burger-icon:before {
-  top: 0;
-  transform: rotate(90deg);
-}
-
-.checkboxToggle:checked + .burger-label .burger-icon:after {
-  top: 0;
-  transform: rotate(90deg);
-}
-
-/* Стили для списка меню */
-.nav-links {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-}
-
-.nav-links li {
-  padding: 10px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: black;
-  font-size: 16px;
-}
-
-/* Скрытие меню на мобильных устройствах */
-.nav-links {
-  display: none;
-  flex-direction: column;
-  background-color: #fff;
-  position: absolute;
-  top: 60px; /* Позиция под бургером */
-  width: 100%;
-  left: 0;
-}
-
-/* Показ меню при активном чекбоксе */
-.checkboxToggle:checked ~ .nav-links {
-  display: flex;
-}
-
 ul li a:hover {
   margin: auto;
   border-radius: 8px;
@@ -1325,6 +1241,8 @@ footer {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
+
+
 @media screen and (min-width: 600px) and (max-width: 1439px) {
   * {
     box-sizing: border-box;
@@ -1534,39 +1452,19 @@ footer {
 }
 
 @media screen and (max-width: 599px) {
-  * {
-    box-sizing: border-box;
-  }
-
   body,
-  html {
-    /* overflow-x: hidden; */
-  }
-
-  body {
-    width: 100%;
-    margin: 0 auto;
+  main {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    height: auto;
-    overflow-x: hidden;
-    background-color: #cecfd2;
+    flex-wrap: wrap;
+    background-color: #53389e;
   }
-
   nav ul {
     flex-wrap: wrap;
   }
 
   footer {
     width: 100%;
-  }
-
-  .burger-container {
-    display: block; /* Показываем бургер на маленьких экранах */
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
   }
 }
