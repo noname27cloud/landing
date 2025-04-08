@@ -34,6 +34,7 @@ function generateSlider(data) {
             class="slider-image"
           />
       `;
+        sliderContent.appendChild(sliderCard);
       });
     });
 }
