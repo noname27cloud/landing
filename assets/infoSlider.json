@@ -1,0 +1,25 @@
+{
+  "reviews": [
+    {
+      "reviewStar": "assets/starsSlider.svg",
+      "reviewText": "Incredible attention to detail and professionalism. Our website turned out better than we imagined!",
+      "reviewName": "— Hana Saito",
+      "reviewJob": "Marketing Director, BrightWave",
+      "reviewImage": "assets/sliderImage1.jpeg"
+    },
+    {
+      "reviewStar": "assets/starsSlider1.svg",
+      "reviewText": "Reliable, efficient, and creative. The best experience we've had with a development team.",
+      "reviewName": "— Daniel Foster",
+      "reviewJob": "Founder, ElevateApps",
+      "reviewImage": "assets/sliderImage2.jpeg"
+    },
+    {
+      "reviewStar": "assets/starsSlider.svg",
+      "reviewText": "Seamless process and outstanding results! The team exceeded expectations at every step.",
+      "reviewName": "— Aoife Gallagher",
+      "reviewJob": "CTO, NexaTech",
+      "reviewImage": "assets/sliderImage3.jpeg"
+    }
+  ]
+}

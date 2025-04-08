@@ -156,7 +156,7 @@
     <!--         HERO SECTION      -->
     <!-- ========================= -->
     <main>
-      <section class="hero container">
+      <section class="hero container" id="hero">
         <div class="hero-content">
           <div class="hero-with-btn">
             <div class="hero-text">
@@ -193,7 +193,7 @@
       <!-- ========================= -->
       <!--           ABOUT           -->
       <!-- ========================= -->
-      <section class="about container">
+      <section class="about container" id="about">
         <div class="about-content">
           <div class="about-header">
             <h3 class="about-h3">Who we are</h3>
@@ -271,7 +271,33 @@
       <!-- ========================= -->
       <!--          SLIDER           -->
       <!-- ========================= -->
-      <section class="slider"></section>
+      <section class="slider container" id="slider">
+        <div class="slider-content">
+          <div class="slider-card">
+            <div class="slider-rating">
+              <span class="slider-stars"></span>
+            </div>
+            <div class="slider-review">
+              <h2 class="slider-h2">{{reviewText}}</h2>
+            </div>
+            <div class="slider-info">
+              <p class="slider-name">{{reviewName}}</p>
+              <p class="slider-work">{{reviewJob}}</p>
+            </div>
+            <div class="slider-scroll">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+          <img
+            src="{{reviewImage}}"
+            alt="{{reviewImageName}}"
+            class="slider-image"
+          />
+        </div>
+      </section>
     </main>
+    <script src="js/app.js"></script>
   </body>
 </html>
