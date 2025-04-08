@@ -1,4 +1,4 @@
-function generateSlider(data) {
+function generateSlider() {
   const sliderContent = document.querySelector(".slider-content");
   const sliderDots = document.querySelector(".slider-scroll");
 
@@ -10,6 +10,7 @@ function generateSlider(data) {
       reviews.forEach((review, index) => {
         const sliderCard = document.createElement("div");
         sliderCard.classList.add("slider-card");
+        if (index === 0) sliderCard.classList.add("active");
 
         sliderCard.innerHTML = `
       <div class="slider-rating">
@@ -22,12 +23,7 @@ function generateSlider(data) {
               <p class="slider-name">${review.reviewName}</p>
               <p class="slider-work">${review.reviewJob}</p>
             </div>
-            <div class="slider-scroll">
-              <span class="dot active"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          </div>
+      
           <img
             src="${review.reviewImage}"
             alt="Review Image"
@@ -35,6 +31,22 @@ function generateSlider(data) {
           />
       `;
         sliderContent.appendChild(sliderCard);
+
+        const dot = document.createElement("span");
+        dot.classList.add("dot");
+        if (index === 0) dot.classList.add("active");
+        sliderDots.appendChild(dot);
+
+        dot.addEventListener("click", () => {
+          const allCards = document.querySelectorAll(".slider-card");
+          const allDots = document.querySelectorAll(".dot");
+
+          allCards.forEach((card) => card.classList.remove("active"));
+          allDots.forEach((d) => d.classList.remove("active"));
+
+          sliderCard.classList.add("active");
+          dot.classList.add("active");
+        });
       });
     });
 }
