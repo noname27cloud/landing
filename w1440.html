@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Applet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ========================= -->
+    <!--         HEADER            -->
+    <!-- ========================= -->
+    <header class="primary-header container">
+      <nav class="primary-nav content hamburger-menu">
+        <div class="logo">
+          <a href="#"><img src="assets/logoo.svg" alt="logo" /> </a>
+          <h1>Applet</h1>
+        </div>
+
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+
+        <ul class="menu__box">
+          <li><a class="menu__item" href="#about">About</a></li>
+          <li><a class="menu__item" href="#projects">Projects</a></li>
+          <li><a class="menu__item" href="#faq">FAQ</a></li>
+          <li><a class="menu__item" href="#contact">Contacts</a></li>
+          <li>
+            <input type="checkbox" id="theme-toggle" hidden />
+            <label for="theme-toggle" class="theme-switch">
+              <svg
+                class="sun-svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 1V3.76923"
+                  stroke="#535862"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M13 22.2307V24.9999"
+                  stroke="#535862"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M21.4854 4.51465L19.5273 6.47273"
+                  stroke="#535862"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M6.47273 19.5273L4.51465 21.4854"
+                  stroke="#535862"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M24.9999 13H22.2307"
+                  stroke="#535862"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M3.76923 13H1"
+                  stroke="#535862"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M21.4854 21.4854L19.5273 19.5273"
+                  stroke="#535862"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M6.47273 6.47273L4.51465 4.51465"
+                  stroke="#535862"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M13 17.6153C15.549 17.6153 17.6154 15.5489 17.6154 12.9999C17.6154 10.4509 15.549 8.38452 13 8.38452C10.451 8.38452 8.38464 10.4509 8.38464 12.9999C8.38464 15.5489 10.451 17.6153 13 17.6153Z"
+                  stroke="#535862"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <svg
+                class="moon-svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.46154 6.07692C7.46154 4.31038 7.72173 2.5225 8.38462 1C3.97519 2.91942 1 7.42231 1 12.5385C1 19.4206 6.57942 25 13.4615 25C18.5777 25 23.0806 22.0248 25 17.6154C23.4775 18.2783 21.6896 18.5385 19.9231 18.5385C13.041 18.5385 7.46154 12.959 7.46154 6.07692Z"
+                  fill="#94979C"
+                  stroke="#94979C"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </label>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- ========================= -->
+      <!--         HERO SECTION      -->
+      <!-- ========================= -->
+      <section class="hero-page container" id="about">
+        <div class="even-columns content">
+          <div class="hero-content">
+            <div class="header-content">
+              <h1 class="fs-primary-heading">
+                Custom Digital Solutions for Ambitious Brands
+              </h1>
+              <p class="projects-description-1">
+                Tailoring approaches to unique needs, transforming ideas into
+                exceptional digital experiences.
+              </p>
+            </div>
+
+            <button
+              type="button"
+              class="contact-button"
+              onclick="location.href='#contact'"
+            >
+              Contact us
+            </button>
+            <button
+              type="button"
+              class="projects-button"
+              onclick="location.href='#projects'"
+            >
+              Projects
+            </button>
+          </div>
+          <div><img src="assets/bg.png" alt="Computer" /></div>
+        </div>
+      </section>
+      <!-- ========================= -->
+      <!--    GUIDING PRINCIPLES     -->
+      <!-- ========================= -->
+      <section class="principles container">
+        <div class="header-content header">
+          <h3 class="projects-heading">Who we are</h3>
+          <h2 class="header-name">Our Guiding Principles</h2>
+          <p class="projects-description">
+            We focus on what truly matters. Whether shaping workflows, making
+            key <br />
+            decisions, or growing our team, these principles define everything
+            we do.
+          </p>
+        </div>
+
+        <!-- List of company principles -->
+        <div class="feature-div">
+          <div class="feature-card">
+            <img src="assets/Featured_icon.svg" alt="icon1" />
+            <h1>Empower Our Team</h1>
+            <p>
+              Recognize what drives our people. Provide the tools and support
+              they need to thrive.
+            </p>
+          </div>
+          <div class="feature-card">
+            <img src="assets/Featured_icon_(1).svg" alt="icon2" />
+            <h1>Support and Elevate Each Other</h1>
+            <p>
+              Collaboration over competition. Growth comes from honesty,
+              respect, and shared success.
+            </p>
+          </div>
+          <div class="feature-card">
+            <img src="assets/Featured_icon_(2).svg" alt="icon3" />
+            <h1>Take Pride in Excellence</h1>
+            <p>
+              Commit to quality in every project. Deliver nothing but the
+              best—every time.
+            </p>
+          </div>
+          <div class="feature-card">
+            <img src="assets/Featured_icon_(3).svg" alt="icon4" />
+            <h1>Put Customers First</h1>
+            <p>
+              Listen, understand, and exceed expectations. Their success is our
+              success
+            </p>
+          </div>
+          <div class="feature-card">
+            <img src="assets/Featured_icon_(4).svg" alt="icon5" />
+            <h1>Challenge the Impossible</h1>
+            <p>
+              Embrace complexity. Seek innovation. Boldly ask “What if?” and
+              turn it into “Why not?”
+            </p>
+          </div>
+          <div class="feature-card">
+            <img src="assets/Featured_icon_(5).svg" alt="icon6" />
+            <h1>Master the Details</h1>
+            <p>
+              Excellence is in the little things. Every detail counts in
+              building something remarkable.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- ========================= -->
+      <!--      TESTIMONIALS         -->
+      <!-- ========================= -->
+      <section class="review">
+        <div class="testimonial-wrapper container">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="even">
+                <div class="starts">
+                  <img src="assets/Stars.svg" alt="stars" />
+                </div>
+                <div class="quotes">
+                  <p class="quote">
+                    Incredible attention to detail and professionalism. Our
+                    website turned out better than we imagined!
+                  </p>
+                </div>
+                <div class="author-desig">
+                  <p class="author">— Hana Saito</p>
+                  <p class="designation">Marketing Director, BrightWave</p>
+                </div>
+                <div class="dots">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-image">
+            <img src="assets/Image.svg" alt="Hana Saito" />
+          </div>
+        </div>
+      </section>
+      <!-- ========================= -->
+      <!--      CONTACT SECTION      -->
+      <!-- ========================= -->
+      <section class="projects-wrapper container" id="projects">
+        <div class="projects-container content">
+          <div class="header-content header">
+            <h3 class="projects-heading">Latest projects</h3>
+            <h2 class="header-name">Innovations we’re proud of</h2>
+            <p class="projects-description">
+              Explore our portfolio of innovative, tailored solutions delivering
+              exceptional results for our clients.
+            </p>
+          </div>
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <article class="project-card">
+              <img src="assets/Image_(5).svg" alt="E-commerce Revolution" />
+              <div class="name-of-projects">
+                <p class="category">Website</p>
+                <div class="name">
+                  <h3 class="project-name">E-commerce Revolution</h3>
+                  <img src="assets/arrow-up-right.svg" alt="arrow" />
+                </div>
+                <p class="project-desc">
+                  E-commerce Revolution: Built a dynamic store with seamless
+                  payments and recommendations.
+                </p>
+              </div>
+              <p class="project-info">6 weeks | Next.js | Stripe API</p>
+              <p class="project-date">18 Jan 2024</p>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card">
+              <img src="assets/Image_(6).svg" alt="EduLearn" />
+              <div class="name-of-projects">
+                <p class="category">Application</p>
+                <div class="name">
+                  <h3 class="project-name">EduLearn</h3>
+                  <img src="assets/arrow-up-right.svg" alt="arrow" />
+                </div>
+                <p class="project-desc">
+                  Designed an e-learning platform featuring video lessons,
+                  quizzes, and progress tracking.
+                </p>
+              </div>
+              <p class="project-info">8 months | React Native | AWS</p>
+              <p class="project-date">15 Jan 2025</p>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card">
+              <img src="assets/Image_(7).svg" alt="Urban Ride Hub" />
+              <div class="name-of-projects">
+                <p class="category">Website</p>
+                <div class="name">
+                  <h3 class="project-name">Urban Ride Hub</h3>
+                  <img src="assets/arrow-up-right.svg" alt="arrow" />
+                </div>
+                <p class="project-desc">
+                  Created a bike rental site with real-time availability,
+                  routes, and membership management.
+                </p>
+              </div>
+              <p class="project-info">3 weeks | Angular | Google Maps API</p>
+              <p class="project-date">20 Apr 2022</p>
+            </article>
+          </div>
+
+          <button
+            class="view-all-btn"
+            onclick="location.href='projectsW1440.html'"
+          >
+            View all projects
+          </button>
+        </div>
+      </section>
+      <!-- ========================= -->
+      <!--         FAQ SECTION            -->
+      <!-- ========================= -->
+      <section class="faq-section" id="faq">
+        <div class="faq-container container">
+          <div class="faq-header header-content">
+            <h2 class="header-name">Frequently asked questions</h2>
+            <p class="projects-description">
+              Answers to the most common questions about our services and
+              processes.
+            </p>
+          </div>
+          <div class="faq-item">
+            <label class="faq-question">
+              <span>Do you develop both websites and mobile apps?</span>
+              <img
+                class="faq-toggle"
+                src="assets/minus-circle.svg"
+                alt="Toggle Icon"
+              />
+            </label>
+            <p class="answer">
+              Yes, we specialize in developing both websites and mobile
+              applications. Our team ensures that each project is tailored to
+              meet your business goals, whether it’s a website, a web
+              application, or a mobile app for iOS and Android.
+            </p>
+          </div>
+          <div class="faq-item">
+            <label class="faq-question">
+              <span>How long does it take to develop a project?</span>
+              <img
+                class="faq-toggle"
+                src="assets/plus-circle.svg"
+                alt="Toggle Icon"
+              />
+            </label>
+          </div>
+
+          <div class="faq-item">
+            <label class="faq-question">
+              <span>What technologies do you use?</span>
+              <img
+                class="faq-toggle"
+                src="assets/plus-circle.svg"
+                alt="Toggle Icon"
+              />
+            </label>
+          </div>
+          <div class="faq-item">
+            <label class="faq-question">
+              <span>Can you redesign an existing website or app?</span>
+              <img
+                class="faq-toggle"
+                src="assets/plus-circle.svg"
+                alt="Toggle Icon"
+              />
+            </label>
+          </div>
+          <div class="faq-item">
+            <label class="faq-question">
+              <span>Do you provide post-launch support?</span>
+              <img
+                class="faq-toggle"
+                src="assets/plus-circle.svg"
+                alt="Toggle Icon"
+              />
+            </label>
+          </div>
+          <div class="faq-item">
+            <label class="faq-question">
+              <span>How do I get a quote for my project?</span>
+              <img
+                class="faq-toggle"
+                src="assets/plus-circle.svg"
+                alt="Toggle Icon"
+              />
+            </label>
+          </div>
+        </div>
+      </section>
+      <!-- ========================= -->
+      <!--      CONTACT SECTION      -->
+      <!-- ========================= -->
+
+      <section class="contact-section container first" id="contact">
+        <div class="content">
+          <div class="header-content">
+            <h3 class="projects-heading">Contact us</h3>
+            <h2 class="header-name">Let’s build something great together</h2>
+            <p class="projects-description">
+              Have a project in mind? Reach out, and let’s bring your ideas to
+              life.
+            </p>
+          </div>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="icon">
+                <img src="assets/Featured_icon_(6).svg" alt="email" />
+              </div>
+              <h3>Email us</h3>
+              <p>For inquiries, contact us.</p>
+              <a href="mailto:info@applet.com" target="_blank"
+                >info@applet.com</a
+              >
+            </div>
+            <div class="contact-card">
+              <div class="icon">
+                <img src="assets/Featured_icon_(7).svg" alt="email" />
+              </div>
+              <h3>Chat with us</h3>
+              <p>Get quick replies.</p>
+              <a href="mailto:support@applet.com" target="_blank"
+                >support@applet.com</a
+              >
+            </div>
+            <div class="contact-card">
+              <div class="icon">
+                <img src="assets/Featured_icon_(8).svg" alt="street" />
+              </div>
+              <h3>Visit us</h3>
+              <p>Visit our office HQ.</p>
+              <a
+                href="https://maps.google.com/?q=123%20Innovation%20Street,%20San%20Francisco,%20CA%2094105"
+                target="_blank"
+                rel="noopener"
+              >
+                123 Innovation Street, San Francisco, CA 94105
+              </a>
+            </div>
+            <div class="contact-card">
+              <div class="icon">
+                <img src="assets/Featured_icon_(9).svg" alt="phone" />
+              </div>
+              <h3>Call us</h3>
+              <p>Mon–Fri, 9 AM – 6 PM.</p>
+              <a href="tel:+14151234567" target="_blank">+1 (415) 123-4567</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ========================= -->
+    <!--         FOOTER            -->
+    <!-- ========================= -->
+    <footer class="footer">
+      <div class="foot container">
+        <div class="err content">
+          <div class="div-p"><p>© 2025 Applet. All rights reserved.</p></div>
+          <div class="social-links">
+            <a href="#"><img src="assets/Vector.svg" alt="vector" /></a>
+            <a href="#"><img src="assets/Group.svg" alt="LinkedIn" /></a>
+            <a href="#"><img src="assets/Social_icon.svg" alt="Facebook" /></a>
+            <a href="#"
+              ><img src="assets/Social_icon_(1).svg" alt="GitHub"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
