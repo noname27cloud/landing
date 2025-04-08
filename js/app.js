@@ -1,9 +1,13 @@
 function generateSlider(data) {
   const sliderContent = document.querySelector(".slider-content");
+  const sliderDots = document.querySelector(".slider-scroll");
+
   fetch("assets/infoSlider.json")
     .then((response) => response.json())
     .then((data) => {
-      data.reviews.forEach((review, index) => {
+      const reviews = data.reviews;
+
+      reviews.forEach((review, index) => {
         const sliderCard = document.createElement("div");
         sliderCard.classList.add("slider-card");
 
@@ -12,11 +16,11 @@ function generateSlider(data) {
       <img src="${review.reviewStar}" alt="Rating stars" class="slider-stars"/>
       </div>
        <div class="slider-review">
-            <h2 class="slider-h2">${reviewText}</h2>
+            <h2 class="slider-h2">${review.reviewText}</h2>
         </div>
          <div class="slider-info">
-              <p class="slider-name">${reviewName}</p>
-              <p class="slider-work">${reviewJob}</p>
+              <p class="slider-name">${review.reviewName}</p>
+              <p class="slider-work">${review.reviewJob}</p>
             </div>
             <div class="slider-scroll">
               <span class="dot active"></span>
@@ -25,7 +29,7 @@ function generateSlider(data) {
             </div>
           </div>
           <img
-            src="${reviewImage}"
+            src="${review.reviewImage}"
             alt="Review Image"
             class="slider-image"
           />
@@ -33,3 +37,5 @@ function generateSlider(data) {
       });
     });
 }
+
+generateSlider();

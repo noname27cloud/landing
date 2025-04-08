@@ -1,0 +1,17 @@
+ <div class="slider-card">
+            <div class="slider-rating">
+              <span class="slider-stars"></span>
+            </div>
+            <div class="slider-review">
+              <h2 class="slider-h2">{{reviewText}}</h2>
+            </div>
+            <div class="slider-info">
+              <p class="slider-name">{{reviewName}}</p>
+              <p class="slider-work">{{reviewJob}}</p>
+            </div>
+            <div class="slider-scroll">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
