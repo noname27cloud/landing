@@ -2,27 +2,17 @@ function generateSlider() {
   const sliderContent = document.querySelector(".slider-content");
   const sliderDots = document.querySelector(".slider-scroll");
 
-  const cashedData = localStorage.getItem("sliderReviews");
+  fetch("assets/infoSlider.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const reviews = data.reviews;
 
-  if (cashedData) {
-    const data = JSON.parse(cashedData);
-    createSliderFromData(data);
-  } else {
-    fetch("assets/infoSlider.json")
-      .then((response) => response.json())
-      .then((data) => {
-        localStorage.setItem("sliderReviews", JSON.stringify(data));
-        createSliderFromData(data);
+      reviews.forEach((review, index) => {
+        const sliderCard = document.createElement("div");
+        sliderCard.classList.add("slider-card");
+        if (index === 0) sliderCard.classList.add("active");
 
-        function createSliderFromData(data) {
-          const reviews = data.reviews;
-
-          reviews.forEach((review, index) => {
-            const sliderCard = document.createElement("div");
-            sliderCard.classList.add("slider-card");
-            if (index === 0) sliderCard.classList.add("active");
-
-            sliderCard.innerHTML = `
+        sliderCard.innerHTML = `
       <div class="slider-rating">
       <img src="${review.reviewStar}" alt="Rating stars" class="slider-stars"/>
       </div>
@@ -40,27 +30,25 @@ function generateSlider() {
             class="slider-image" height="60" width="50"
           />
       `;
-            sliderContent.appendChild(sliderCard);
+        sliderContent.appendChild(sliderCard);
 
-            const dot = document.createElement("span");
-            dot.classList.add("dot");
-            if (index === 0) dot.classList.add("active");
-            sliderDots.appendChild(dot);
+        const dot = document.createElement("span");
+        dot.classList.add("dot");
+        if (index === 0) dot.classList.add("active");
+        sliderDots.appendChild(dot);
 
-            dot.addEventListener("click", () => {
-              const allCards = document.querySelectorAll(".slider-card");
-              const allDots = document.querySelectorAll(".dot");
+        dot.addEventListener("click", () => {
+          const allCards = document.querySelectorAll(".slider-card");
+          const allDots = document.querySelectorAll(".dot");
 
-              allCards.forEach((card) => card.classList.remove("active"));
-              allDots.forEach((d) => d.classList.remove("active"));
+          allCards.forEach((card) => card.classList.remove("active"));
+          allDots.forEach((d) => d.classList.remove("active"));
 
-              sliderCard.classList.add("active");
-              dot.classList.add("active");
-            });
-          });
-        }
+          sliderCard.classList.add("active");
+          dot.classList.add("active");
+        });
       });
-  }
+    });
 }
 
 generateSlider();
