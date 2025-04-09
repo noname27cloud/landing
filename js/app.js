@@ -25,9 +25,9 @@ function generateSlider() {
             </div>
       
           <img
-            src="${review.reviewImage}"
+            src="${review.reviewImage}" 
             alt="Review Image"
-            class="slider-image"
+            class="slider-image" height="60" width="50"
           />
       `;
         sliderContent.appendChild(sliderCard);

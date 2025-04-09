@@ -28,7 +28,8 @@
       }
 
       .slider-card img {
-        width: 100%;
+        width: 20%;
+        height: 50%;
       }
 
       .slider-scroll {
@@ -52,7 +53,7 @@
 
       /* Стиль для слайдов с отзывами */
       .slider-rating img {
-        width: 20px;
+        width: 10%;
       }
 
       .slider-review {
@@ -63,6 +64,23 @@
       .slider-work {
         font-size: 14px;
         color: #666;
+      }
+
+      .slider-content {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .slider-card {
+        min-width: 100%;
+        display: none; /* Скрыть все слайды по умолчанию */
+        flex-shrink: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .slider-card.active {
+        display: block; /* Показывать только активный слайд */
       }
     </style>
   </head>
