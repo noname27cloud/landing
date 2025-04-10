@@ -51,4 +51,22 @@ function generateSlider() {
     });
 }
 
+function generateArticles() {
+  const articles = document.querySelector(".projects-articles");
+
+  fetch("assets/articles.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const articles = data.articles;
+
+      articles.forEach((article, index) => {
+        const sliderArticle = document.createElement("div");
+        sliderArticle.classList.add("slider-article");
+        if (index === 0) sliderArticle.classList.add("active");
+
+        sliderArticle.innerHTML = `<div class="article-image"> <img src="${article.articleImage}" alt="ArticleImage" class="article-img"/></div>`;
+      });
+    });
+}
+
 generateSlider();
