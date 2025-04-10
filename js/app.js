@@ -52,21 +52,42 @@ function generateSlider() {
 }
 
 function generateArticles() {
-  const articles = document.querySelector(".projects-articles");
+  const container = document.querySelector(".projects-articles");
 
   fetch("assets/articles.json")
     .then((response) => response.json())
     .then((data) => {
-      const articles = data.articles;
+      const shuffled = data.sort(() => 0.5 - Math.random());
+      const randomArticles = shuffled.slice(0, 3);
 
-      articles.forEach((article, index) => {
-        const sliderArticle = document.createElement("div");
-        sliderArticle.classList.add("slider-article");
-        if (index === 0) sliderArticle.classList.add("active");
+      randomArticles.forEach((article, index) => {
+        const articleDiv = document.createElement("div");
+        articleDiv.classList.add("slider-article");
+        if (index === 0) articleDiv.classList.add("active");
 
-        sliderArticle.innerHTML = `<div class="article-image"> <img src="${article.articleImage}" alt="ArticleImage" class="article-img"/></div>`;
+        const duration = article.meta.duration_days;
+        const technologies = article.meta.technologies.join(", ");
+
+        articleDiv.innerHTML = `
+          <div class="article-image"> 
+            <img src="${article.articleImage}" alt="Article Image" class="article-img"/>
+          </div>
+          <div class="article-info">
+            <p class="article-tag">${article.tag}</p>
+            <h3 class="article-title">${article.title}</h3>
+            <p class="article-description">${article.description}</p>
+          </div>
+          <div class="article-data">
+            <p>${duration} days | ${technologies}</p>
+            <p>${article.created_at}</p>
+          </div>
+        `;
+
+        container.appendChild(articleDiv);
       });
     });
 }
+
+generateArticles();
 
 generateSlider();

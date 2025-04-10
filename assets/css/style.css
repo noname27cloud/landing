@@ -1,5 +1,85 @@
-body {
+* {
+  box-sizing: border-box;
+  text-decoration: none !important;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
   font-family: Inter;
+  font-size: 100%;
+  vertical-align: baseline;
+  width: 1440px;
+  height: 100%;
+}
+
+.container {
+  width: 1440px;
+  max-width: 100%;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  max-height: 24px;
+  margin: 28px 80px;
+}
+
+.logo {
+  width: 124px;
+  height: 24px;
+  gap: 50px;
+}
+
+.icon {
+}
+
+.applet {
+  width: 82px;
+  height: 24px;
+  top: 0px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #000000;
+}
+
+:root {
+  --background-color: #ffffff;
+  --logo-text: #000000;
+  --primary-text: #181d27;
+  --secondary-text: #535862;
+  --different-bg: #fafafa;
+  --category-text: #6941c6;
+  --hover-color-btn: #6941c6; /*Contact Us*/
+  --button-color-projects: #ffffff;
+  --project-info: #181d27;
+  --project-btn-hover: #fafafa;
+  --svg-theme-hover: #6941c6;
+}
+
+:root:has(#theme-toggle:checked) {
+  --background-color: #0c0e12;
+  --logo-text: #ffffff;
+  --primary-text: #ffffff;
+  --secondary-text: #94979c;
+  --different-bg: #13161b;
+  --category-text: #cecfd2;
+  --button-color-projects: #13161b;
+  --project-btn-hover: #373a41;
+  --project-info: #94979c;
+}
+
+#menu-toggle {
+  display: none;
 }
 
 /* Общий стиль для слайдера */
