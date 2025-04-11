@@ -13,6 +13,7 @@ function generateSlider() {
         if (index === 0) sliderCard.classList.add("active");
 
         sliderCard.innerHTML = `
+        <div class="slider-info-container">
       <div class="slider-rating">
       <img src="${review.reviewStar}" alt="Rating stars" class="slider-stars"/>
       </div>
@@ -22,13 +23,16 @@ function generateSlider() {
          <div class="slider-info">
               <p class="slider-name">${review.reviewName}</p>
               <p class="slider-work">${review.reviewJob}</p>
+              
             </div>
-      
+            </div>
+      <div>
           <img
             src="${review.reviewImage}" 
             alt="Review Image"
-            class="slider-image" height="60" width="50"
+            class="slider-image" 
           />
+          </div>
       `;
         sliderContent.appendChild(sliderCard);
 
