@@ -413,7 +413,27 @@ body {
 }
 
 .slider-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+  width: 608px;
+  height: 306px;
+  margin: 44px;
   background-color: #000000;
+}
+
+.slider-h2 {
+  width: 608px;
+  height: 132px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
 }
 
 .slider {
