@@ -686,3 +686,27 @@ body {
   line-height: 20px;
   color: var(--secondary-text);
 }
+
+.projects-view-Btn {
+  border: none;
+  background-color: #7f56d9;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: white;
+  width: 168px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  border: 1px solid rgb(10, 13, 18, 0.05);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.projects-view-Btn:hover {
+  background-color: var(--hover-color-btn);
+}
