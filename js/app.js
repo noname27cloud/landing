@@ -214,7 +214,5 @@ function faq() {
 }
 
 faq();
-
 generateArticles();
-
 generateSlider();
