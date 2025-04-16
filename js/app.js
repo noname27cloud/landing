@@ -7,6 +7,8 @@ function generateSlider() {
       const reviews = data.reviews;
       const allCards = [];
       const allDots = [];
+      let currentIndex = 0;
+      let sliderInterval;
 
       reviews.forEach((review, index) => {
         const sliderCard = document.createElement("div");
@@ -103,10 +105,8 @@ function generateArticles() {
         const fullList = [...techList, ...worksList];
         const formattedMeta = fullList.join(" | ");
 
-        // setTimeout(randomArticles, 3000);
-
         articleDiv.innerHTML = `
-        <div class="projects-article">
+        <div class="projects-article" data-delay="2000s">
           <div class="article-image"> 
             <img src="${article.articleImage}" alt="Article Image" class="article-img"/>
           </div>
