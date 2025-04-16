@@ -688,10 +688,11 @@ body {
 }
 
 .projects-view-Btn {
+  box-sizing: border-box;
   border: none;
   background-color: #7f56d9;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 28px;
   color: white;
   width: 168px;
@@ -709,4 +710,119 @@ body {
 
 .projects-view-Btn:hover {
   background-color: var(--hover-color-btn);
+}
+
+.faq-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 96px 0px;
+  gap: 64px;
+  width: 1440px;
+  height: 878px;
+  background: #fafafa;
+}
+
+.faq-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 768px;
+  max-width: 768px;
+  height: 94px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.faq-h2 {
+  width: 768px;
+  height: 44px;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  color: #181d27;
+  padding: 0px;
+}
+
+.faq-p {
+  width: 768px;
+  height: 30px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #535862;
+  letter-spacing: 0.3px;
+}
+
+.faq-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  width: 768px;
+  min-width: 320px;
+  height: 108px;
+  gap: 28px;
+}
+
+.faq-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5.5px;
+  position: relative;
+}
+
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 720px;
+  /* height: 33px; */
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #181d27;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+}
+
+.faq-item:not(:nth-child(1)) {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0px 0px;
+  width: 768px;
+  min-width: 320px;
+  /* height: 52px; */
+  border-top: 1px solid #e9eaeb;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #181d27;
+}
+
+.faqAnswer {
+  width: 720px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #535862;
+  letter-spacing: 0.09px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease;
+}
+
+.faq-item.active .faqAnswer {
+  max-height: 72px;
+}
+
+.accord {
+  position: absolute;
+  right: 0px;
+  padding: 0px;
+  width: 24px;
+  height: 26px;
 }

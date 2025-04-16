@@ -103,6 +103,8 @@ function generateArticles() {
         const fullList = [...techList, ...worksList];
         const formattedMeta = fullList.join(" | ");
 
+        // setTimeout(randomArticles, 3000);
+
         articleDiv.innerHTML = `
         <div class="projects-article">
           <div class="article-image"> 
@@ -132,8 +134,51 @@ function generateArticles() {
 
         container.appendChild(articleDiv);
       });
+
+      function switchSlide () {
+        
+      }
     });
 }
+
+function faq() {
+  const container = document.querySelector(".faq-info");
+
+  fetch("assets/faq.json")
+    .then((response) => response.json())
+    .then((data) => {
+      data.faq.forEach((faqItem) => {
+        const faqElement = document.createElement("div");
+        faqElement.classList.add("faq-item");
+
+        const quetionElement = document.createElement("div");
+        quetionElement.classList.add("faqQuestion");
+        quetionElement.textContent = faqItem.question;
+
+        const accord = document.createElement("img");
+        accord.classList.add("accord");
+        accord.src = faqItem.accordPlus;
+
+        const answerElement = document.createElement("div");
+        answerElement.classList.add("faqAnswer");
+        answerElement.textContent = faqItem.answer;
+
+        faqElement.appendChild(quetionElement);
+        faqElement.appendChild(accord);
+        faqElement.appendChild(answerElement);
+        container.appendChild(faqElement);
+
+        const toggleActive = () => {
+          faqElement.classList.toggle("active");
+        };
+
+        quetionElement.addEventListener("click", toggleActive);
+        accord.addEventListener("click", toggleActive);
+      });
+    });
+}
+
+faq();
 
 generateArticles();
 
