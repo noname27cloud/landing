@@ -7,8 +7,8 @@ function generateSlider() {
       const reviews = data.reviews;
       const allCards = [];
       const allDots = [];
-      let currentIndex = 0;
-      let sliderInterval;
+      let activeIndex = 0;
+      let autoSlideInterval;
 
       reviews.forEach((review, index) => {
         const sliderCard = document.createElement("div");
@@ -16,7 +16,6 @@ function generateSlider() {
         if (index === 0) sliderCard.classList.add("active");
         allCards.push(sliderCard);
 
-        // Левая часть: инфо + dots
         const infoContainer = document.createElement("div");
         infoContainer.classList.add("slider-info-container");
 
@@ -35,7 +34,6 @@ function generateSlider() {
           <p class="slider-work">${review.reviewJob}</p>
         `;
 
-        // dots (внутри каждой карточки)
         const sliderDots = document.createElement("div");
         sliderDots.classList.add("slider-scroll");
 
@@ -45,30 +43,19 @@ function generateSlider() {
           if (dotIndex === index) dot.classList.add("active");
 
           dot.addEventListener("click", () => {
-            allCards.forEach((card) => card.classList.remove("active"));
-            allDots.forEach((dotList) =>
-              dotList.forEach((d) => d.classList.remove("active"))
-            );
-
-            allCards[dotIndex].classList.add("active");
-            allDots.forEach((dotList) =>
-              dotList[dotIndex].classList.add("active")
-            );
+            changeSlide(dotIndex);
           });
 
           sliderDots.appendChild(dot);
         });
 
-        // сохраняем все dots этого блока для управления
         allDots.push(Array.from(sliderDots.children));
 
-        // собираем левую часть
         infoContainer.appendChild(rating);
         infoContainer.appendChild(reviewText);
         infoContainer.appendChild(info);
         infoContainer.appendChild(sliderDots);
 
-        // Правая часть: изображение
         const imageContainer = document.createElement("div");
         const image = document.createElement("img");
         image.src = review.reviewImage;
@@ -76,13 +63,56 @@ function generateSlider() {
         image.classList.add("slider-image");
         imageContainer.appendChild(image);
 
-        // Добавляем в карточку
         sliderCard.appendChild(infoContainer);
         sliderCard.appendChild(imageContainer);
 
-        // Добавляем в слайдер
         sliderContent.appendChild(sliderCard);
       });
+
+      function changeSlide(index) {
+        allCards.forEach((card) => card.classList.remove("active"));
+        allDots.forEach((dotList) =>
+          dotList.forEach((dot) => dot.classList.remove("active"))
+        );
+
+        allCards[index].classList.add("active");
+        allDots.forEach((dotList) => dotList[index].classList.add("active"));
+        activeIndex = index;
+      }
+
+      function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+          activeIndex = (activeIndex + 1) % reviews.length;
+          changeSlide(activeIndex);
+        }, 3000); // Change slide every 3 seconds
+      }
+
+      function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+      }
+
+      // Start the auto-slide when the page loads
+      startAutoSlide();
+
+      // Pause the slider on hover or touch
+      sliderContent.addEventListener("mouseenter", stopAutoSlide);
+      sliderContent.addEventListener("mouseleave", startAutoSlide);
+
+      // Handle touch events for mobile devices
+      let touchStartTime = 0;
+      sliderContent.addEventListener("touchstart", (e) => {
+        touchStartTime = Date.now();
+        stopAutoSlide();
+      });
+      sliderContent.addEventListener("touchend", () => {
+        const touchEndTime = Date.now();
+        if (touchEndTime - touchStartTime < 500) {
+          startAutoSlide();
+        }
+      });
+    })
+    .catch((error) => {
+      console.error("Error fetching slider data:", error);
     });
 }
 
