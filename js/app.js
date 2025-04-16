@@ -135,9 +135,9 @@ function generateArticles() {
         container.appendChild(articleDiv);
       });
 
-      function switchSlide () {
-        
-      }
+      // function switchSlide () {
+
+      // }
     });
 }
 
@@ -170,6 +170,11 @@ function faq() {
 
         const toggleActive = () => {
           faqElement.classList.toggle("active");
+          if (faqElement.classList.contains("active")) {
+            accord.src = faqItem.accordMinus;
+          } else {
+            accord.src = faqItem.accordPlus;
+          }
         };
 
         quetionElement.addEventListener("click", toggleActive);

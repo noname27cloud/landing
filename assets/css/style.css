@@ -43,8 +43,10 @@ body {
   display: block;
   width: 1440px;
   height: 5023px;
+  max-height: 4900px;
+  max-width: 1440px;
   background-color: var(--background-color);
-  /* margin: auto; */
+  margin: 0 auto;
   transition: all 0.5s ease-in;
 }
 
@@ -720,7 +722,7 @@ body {
   gap: 64px;
   width: 1440px;
   height: 878px;
-  background: #fafafa;
+  background: var(--background-color);
 }
 
 .faq-header {
@@ -743,7 +745,7 @@ body {
   line-height: 44px;
   text-align: center;
   letter-spacing: 0.6px;
-  color: #181d27;
+  color: var(--primary-text);
   padding: 0px;
 }
 
@@ -754,7 +756,7 @@ body {
   font-size: 20px;
   line-height: 30px;
   text-align: center;
-  color: #535862;
+  color: var(--secondary-text);
   letter-spacing: 0.3px;
 }
 
@@ -784,7 +786,7 @@ body {
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
-  color: #181d27;
+  color: var(--primary-text);
   cursor: pointer;
   letter-spacing: 0.2px;
 }
@@ -808,11 +810,11 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #535862;
+  color: var(--secondary-text);
   letter-spacing: 0.09px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 1s ease;
+  transition: max-height 0.6s ease;
 }
 
 .faq-item.active .faqAnswer {
@@ -825,4 +827,177 @@ body {
   padding: 0px;
   width: 24px;
   height: 26px;
+}
+.contacts-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 96px 0px;
+  gap: 64px;
+  width: 1440px;
+  height: 676px;
+  background: var(--background-color);
+}
+
+.contacts-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 32px;
+  gap: 14px;
+  width: 1280px;
+  max-width: 1280px;
+  height: 130px;
+}
+
+.contacts-h3 {
+  width: 768px;
+  height: 24px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--category-text);
+}
+
+.contacts-h2 {
+  width: 768px;
+  height: 44px;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0.5px;
+  color: var(--primary-text);
+}
+.contacts-p {
+  width: 768px;
+  height: 30px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--secondary-text);
+  letter-spacing: 0.25px;
+}
+
+.contacts-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 24px;
+  width: 1216px;
+  height: 290px;
+}
+
+.contacts-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 60px;
+  width: 286px;
+  min-width: 280px;
+  height: 290px;
+  background: var(--about-bg);
+  border-radius: 0px;
+}
+
+.contacts-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 238px;
+  height: 106px;
+  max-height: 106px;
+}
+
+.contacts-card-info h3 {
+  height: 30px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--primary-text);
+}
+
+.contacts-card-info p {
+  width: 238px;
+  height: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--secondary-text);
+}
+
+.contacts-card-info a {
+  height: 24px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6941c6;
+  text-decoration: none;
+  text-wrap: balance;
+}
+
+.contacts-card-info:nth-child(2),
+.contacts-card-info:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 0px 48px;
+  gap: 64px;
+  width: 1440px;
+  height: 168px;
+  max-height: 168px;
+  background: #53389e;
+}
+.footer-content {
+  gap: 32px;
+  width: 1280px;
+  max-width: 1280px;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  padding: 32px 0px 0px;
+  gap: 24px 32px;
+  width: 1216px;
+  height: 56px;
+  border-top: 1px solid #7f56d9;
+}
+
+.footer-info {
+  width: 263px;
+  height: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #d6bbfb;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 25px;
+  width: 168px;
+  height: 24px;
+  max-width: 168px;
+}
+
+.footer-social svg:hover path {
+  fill: white;
 }
