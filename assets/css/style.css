@@ -22,6 +22,7 @@ html {
   --project-btn-hover: #fafafa;
   --svg-theme-hover: #6941c6;
   --border-projects-btn: #d5d7da;
+  --top-button: #414651;
 }
 
 :root:has(#theme-toggle:checked) {
@@ -36,6 +37,7 @@ html {
   --project-btn-hover: #373a41;
   --project-info: #94979c;
   --border-projects-btn: #373a41;
+  --top-button: #ffffff;
 }
 
 body {
@@ -1032,4 +1034,31 @@ footer {
 
 .footer-social svg:hover path {
   fill: white;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 7%; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: var(--background-color); /* Set a background color */
+  color: var(--top-button); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  border: 1px solid var(--logo-text);
+}
+
+#myBtn svg path {
+  fill: var(--top-button);
+}
+
+#myBtn:hover {
+  background-color: var(
+    --project-btn-hover
+  ); /* Add a dark-grey background on hover */
 }
