@@ -1,4 +1,6 @@
 to-do:
-1. Burger menu 
-2. Saved theme
-3. Filter for "Projects"
+1. Burger menu (плавный переход, все навигационныйе ссылки если
+нажать на лубую навигационный кнопку он должен закрыться если будет 
+измененине ширины открытые меню должен закрыться)
+2. Filter for "Projects"
+3. Burger menu for mobile 599px and less

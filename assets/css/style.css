@@ -48,14 +48,16 @@ body {
   max-height: 4900px;
   max-width: 1440px;
   background-color: var(--background-color);
-  margin: 0 auto;
+  /* margin: 0 auto; */
   transition: all 0.5s ease-in;
 }
 
 .container {
   width: 1440px;
 }
-
+/*<!-- ========================= -->
+  <!--         HEADER            -->
+  <!-- ========================= -->*/
 header {
   position: sticky;
   top: 0;
@@ -106,6 +108,9 @@ header {
   transition: all 0.5s ease-in;
 }
 
+/*<!-- ========================= -->
+  <!--  NAVIGATION, BURGER MENU  -->
+  <!-- ========================= -->*/
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -168,6 +173,9 @@ header {
     hue-rotate(236deg) brightness(89%) contrast(93%);
 }
 
+/*<!-- ========================= -->
+  <!--        HERO SECTION       -->
+  <!-- ========================= -->*/
 .hero-content {
   width: 1440px;
   margin: 94px 80px;
@@ -307,6 +315,9 @@ main {
   object-position: center;
 }
 
+/*<!-- ========================= -->
+  <!--           ABOUT           -->
+  <!-- ========================= -->*/
 .about-content {
   display: flex;
   flex-direction: column;
@@ -418,6 +429,9 @@ main {
   transition: all 0.5s ease-in;
 }
 
+/*<!-- ========================= -->
+  <!--          SLIDER           -->
+  <!-- ========================= -->*/
 .slider-content {
   display: flex;
   flex-direction: row;
@@ -545,6 +559,9 @@ main {
   z-index: 1;
 }
 
+/*<!-- ========================= -->
+  <!--         PROJECTS          -->
+  <!-- ========================= -->*/
 .projects-content {
   margin-top: 3px;
   display: flex;
@@ -737,7 +754,9 @@ main {
 .projects-view-Btn:hover {
   background-color: var(--hover-color-btn);
 }
-
+/*<!-- ========================= -->
+  <!--            FAQ            -->
+  <!-- ========================= -->*/
 .faq-content {
   display: flex;
   flex-direction: column;
@@ -855,6 +874,10 @@ main {
   width: 24px;
   height: 26px;
 }
+
+/*<!-- ========================= -->
+  <!--         CONTACTS          -->
+  <!-- ========================= -->*/
 .contacts-content {
   display: flex;
   flex-direction: column;
@@ -980,7 +1003,9 @@ main {
   flex-direction: column;
   gap: 13px;
 }
-
+/*<!-- ========================= -->
+  <!--          FOOTER           -->
+  <!-- ========================= -->*/
 footer {
   display: flex;
   flex-direction: column;
