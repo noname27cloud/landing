@@ -45,7 +45,7 @@ body {
   display: block;
   width: 1440px;
   height: 2180px;
-  max-height: 2000px;
+  max-height: 2180px;
   max-width: 1440px;
   background-color: var(--background-color);
   /* margin: 0 auto; */
@@ -55,6 +55,11 @@ body {
 .container {
   width: 1440px;
 }
+
+main {
+  height: 1932px;
+}
+
 /*<!-- ========================= -->
     <!--         HEADER            -->
     <!-- ========================= -->*/
@@ -247,8 +252,9 @@ header {
   align-items: flex-start;
   align-content: center;
   padding: 0px;
-  gap: 48px 32px;
+  gap: 27px 32px;
   width: 1216px;
+  bottom: 10px;
   /* height: 464px; */
 }
 
@@ -276,6 +282,8 @@ header {
   display: flex;
   flex-direction: column;
   max-width: 384px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .article-info {
@@ -329,8 +337,9 @@ header {
 .article-duration {
   font-weight: 600;
   font-size: 14px;
+  font-weight: bold;
   line-height: 20px;
-  color: var(--secondary-text);
+  color: var(--project-info);
   transition: all 0.5s ease-in;
 }
 
@@ -341,72 +350,63 @@ header {
   color: var(--secondary-text);
   transition: all 0.5s ease-in;
 }
+/*<!-- ========================= -->
+  <!--            TAB            -->
+  <!-- ========================= -->*/
 
-.tab-wrap {
-  width: 50%;
-  margin-left: 20%;
-  position: relative;
+.filter-container {
   display: flex;
-  top: -106px;
+  position: relative;
+  border-bottom: 1px solid var(--secondary-text);
+  padding-left: -40px;
+  gap: 3px;
+  z-index: 0;
+  flex-wrap: wrap;
+  width: 1216px;
+  /* align-items: flex-start; */
+  /* justify-items: flex-start; */
+  margin: 0;
+  /* padding: 0; */
 }
 
-input[type="radio"][name="tabs"] {
-  position: absolute;
-  z-index: -1;
-  &:checked {
-    + .tab-label-content {
-      label {
-        color: white;
-      }
-      .tab-content {
-        display: block;
-      }
-    }
-  }
-  @include tabs;
-  &:first-of-type {
-    &:checked {
-      ~ .slide {
-        left: 0;
-      }
-    }
-  }
-}
-
-label {
+.tab {
+  position: relative;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 8px 15px;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.8);
-  background-color: cyan;
-  box-sizing: border-box;
-  display: inline-flex;
+  color: var(--secondary-text);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  font-family: "Inter";
+  font-weight: bold;
+  gap: 5px;
+}
+
+.tab.active {
+  color: #53389e;
+  /* font-weight: bold; */
+}
+
+.tab.active::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: -5px;
+  right: -5px;
+  height: 2px;
+  background-color: #53389e;
+  z-index: 2;
+}
+
+/* .projects {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  height: 56px;
-  transition: color 0.2s ease;
-  width: 100%;
-}
-
-.slide {
-  background: yellow;
-  /* width: calc(100% / #{$num-of-tabs}); */
-  height: 4px;
-  position: absolute;
-  left: 0;
-  top: calc(100% - 4px);
-  transition: left 0.3s ease-out;
-}
-
-.tab-label-content {
-  width: 100%;
-  .tab-content {
-    position: absolute;
-    top: 100px;
-    left: 16px;
-    line-height: 130%;
-    display: none;
-  }
-}
+} */
 
 /*<!-- ========================= -->
   <!--          FOOTER           -->

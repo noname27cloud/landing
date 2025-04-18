@@ -105,6 +105,17 @@ function generateArticles() {
     });
 }
 
+document.querySelectorAll("nav ul li").forEach((item) => {
+  item.addEventListener("click", (e) => {
+    const query = e.target.textContent.trim().toLowerCase();
+    if (query === "all") {
+      fetchData().then((data) => generateArticles(data.results));
+    } else {
+      Search(query);
+    }
+  });
+});
+
 themeToggle();
 topFunction();
 generateArticles();
