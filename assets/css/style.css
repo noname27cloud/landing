@@ -1074,7 +1074,7 @@ footer {
 #myBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
+  bottom: 100px; /* Place the button at the bottom of the page */
   right: 7%; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
@@ -1102,13 +1102,84 @@ footer {
   display: none;
 }
 
+@media (max-width: 1439px) and (min-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+  }
+
+  body,
+  .container,
+  .header-content,
+  .hero-content,
+  .projects-content {
+    width: 100%;
+  }
+  .header-content,
+  .hero-content {
+    margin-left: 0;
+  }
+
+  .hero-title,
+  .projects-header,
+  .projects-content-with-p,
+  .projects-p,
+  .projects-h2,
+  .projects-content,
+  .hero-img img,
+  .hero-p,
+  .hero-text,
+  .about-content,
+  .about-h2,
+  .about-p,
+  .projects-article,
+  .faq-h2,
+  .faq-p,
+  .contacts-content,
+  .contacts-header,
+  .contacts-info {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-btns,
+  .hero-with-btn {
+    height: auto;
+  }
+
+  .about-header,
+  .about-cards,
+  .projects-articles,
+  .faq-content,
+  .footer-content,
+  .projects-h3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .about-card {
+    margin: auto;
+  }
+  .slider-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .faq-info {
+    width: auto;
+    height: auto;
+  }
+}
+
 @media (max-width: 599px) and (min-width: 375px) {
   body {
-    width: 375px;
-    /* margin: 0 auto; */
-    padding: 0;
     margin: 0;
-    font-family: "Inter";
+    padding: 0;
+    height: auto;
   }
 
   .navigation {
@@ -1257,81 +1328,6 @@ footer {
 
   .about-p {
     width: 343px;
-    height: auto;
-  }
-}
-
-@media (max-width: 1439px) and (min-width: 600px) {
-  body {
-    margin: 0;
-    padding: 0;
-    height: auto;
-  }
-
-  body,
-  .container,
-  .header-content,
-  .hero-content,
-  .projects-content {
-    width: 100%;
-  }
-
-  .hero-img img {
-    height: auto;
-    width: 100%;
-  }
-
-  .hero-title,
-  .projects-header,
-  .projects-content-with-p,
-  .projects-p,
-  .projects-h2,
-  .projects-content {
-    width: 100%;
-    height: auto;
-  }
-  .hero-p,
-  .hero-text,
-  .about-content,
-  .about-h2,
-  .about-p,
-  .projects-article,
-  .faq-h2,
-  .faq-p,
-  .contacts-content,
-  .contacts-header,
-  .contacts-info {
-    width: 100%;
-    height: auto;
-  }
-  .hero-btns {
-    height: auto;
-  }
-  .hero-with-btn {
-    height: auto;
-  }
-  .about-header,
-  .about-cards,
-  .projects-articles,
-  .faq-content,
-  .footer-content {
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 100%;
-    height: auto;
-  }
-  .slider-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .faq-info {
-    width: auto;
-    height: auto;
-  }
-  #myBtn {
-    /* margin-right: 50%; */
     height: auto;
   }
 }
