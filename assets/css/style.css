@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 :root {
@@ -45,17 +46,17 @@ html {
 body {
   font-family: "Inter";
   display: block;
-  width: 90em;
-  height: 313.94em;
-  max-height: 306.25em;
-  max-width: 90em;
+  width: 1440px;
+  height: 5023px;
+  max-height: 4900px;
+  max-width: 1440px;
   background-color: var(--background-color);
   /* margin: 0 auto; */
   transition: all 0.5s ease-in;
 }
 
 .container {
-  width: 90em;
+  width: 1440px;
 }
 /*<!-- ========================= -->
   <!--         HEADER            -->
@@ -73,8 +74,8 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 5em;
-  margin: 0 5em;
+  height: 80px;
+  margin: 0 80px;
 }
 
 .logo a {
@@ -85,22 +86,22 @@ header {
 .icon {
   display: flex;
   justify-content: space-between;
-  width: 7.75em;
-  height: 1.5em;
-  margin-left: 2em;
+  width: 124px;
+  height: 24px;
+  margin-left: 32px;
 }
 
 .icon img {
-  margin-top: 0.1875em;
+  margin-top: 3px;
   display: inline-block;
-  width: 1.9375em;
-  height: 1.1875em;
+  width: 31px;
+  height: 19px;
 }
 
 .applet {
   display: inline-block;
-  width: 5.125em;
-  height: 1.5em;
+  width: 82px;
+  height: 24px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -1256,6 +1257,81 @@ footer {
 
   .about-p {
     width: 343px;
-    /* height: auto; */
+    height: auto;
+  }
+}
+
+@media (max-width: 1439px) and (min-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+  }
+
+  body,
+  .container,
+  .header-content,
+  .hero-content,
+  .projects-content {
+    width: 100%;
+  }
+
+  .hero-img img {
+    height: auto;
+    width: 100%;
+  }
+
+  .hero-title,
+  .projects-header,
+  .projects-content-with-p,
+  .projects-p,
+  .projects-h2,
+  .projects-content {
+    width: 100%;
+    height: auto;
+  }
+  .hero-p,
+  .hero-text,
+  .about-content,
+  .about-h2,
+  .about-p,
+  .projects-article,
+  .faq-h2,
+  .faq-p,
+  .contacts-content,
+  .contacts-header,
+  .contacts-info {
+    width: 100%;
+    height: auto;
+  }
+  .hero-btns {
+    height: auto;
+  }
+  .hero-with-btn {
+    height: auto;
+  }
+  .about-header,
+  .about-cards,
+  .projects-articles,
+  .faq-content,
+  .footer-content {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 100%;
+    height: auto;
+  }
+  .slider-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .faq-info {
+    width: auto;
+    height: auto;
+  }
+  #myBtn {
+    /* margin-right: 50%; */
+    height: auto;
   }
 }
