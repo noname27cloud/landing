@@ -56,13 +56,19 @@ function formatProjectDuration(days) {
   }
 }
 
-function generateArticles() {
+function generateArticles(filter = "all") {
   const container = document.querySelector(".projects-articles");
+  container.innerHTML = ""; // очищаем старые статьи
 
   fetch("assets/articles.json")
     .then((response) => response.json())
     .then((data) => {
-      data.forEach((article) => {
+      const filteredArticles =
+        filter === "all"
+          ? data
+          : data.filter((article) => article.tag.toLowerCase() === filter);
+
+      filteredArticles.forEach((article) => {
         const articleDiv = document.createElement("div");
         articleDiv.classList.add("slider-article");
 
@@ -98,7 +104,7 @@ function generateArticles() {
               <p class="article-created">${article.created_at}</p>
             </div>
           </div>
-          `;
+        `;
 
         container.appendChild(articleDiv);
       });
@@ -113,6 +119,28 @@ document.querySelectorAll("nav ul li").forEach((item) => {
     } else {
       Search(query);
     }
+  });
+});
+
+document.querySelectorAll(".filter-container .tab").forEach((button) => {
+  button.addEventListener("click", () => {
+    // Удалить активный класс у всех
+    document
+      .querySelectorAll(".filter-container .tab")
+      .forEach((btn) => btn.classList.remove("active"));
+    // Добавить активный класс текущей
+    button.classList.add("active");
+
+    // Получить фильтр из data-filter
+    const filter = button.dataset.filter.toLowerCase(); // "all", "websites", "applications"
+    const tagFilter =
+      filter === "all"
+        ? "all"
+        : filter === "websites"
+        ? "website"
+        : "application";
+
+    generateArticles(tagFilter);
   });
 });
 
