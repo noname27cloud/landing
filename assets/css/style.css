@@ -106,6 +106,7 @@ header {
   line-height: 24px;
   color: var(--logo-text);
   transition: all 0.5s ease-in;
+  letter-spacing: 0.7px;
 }
 
 /*<!-- ========================= -->
@@ -126,6 +127,7 @@ header {
   flex-direction: row;
   align-items: center;
   gap: 20px;
+  letter-spacing: 0.29px;
 }
 
 .navigation ul li a {
@@ -219,14 +221,13 @@ main {
   font-weight: 600;
   font-size: 60px;
   letter-spacing: 1px;
-  line-height: 72px;
+  line-height: 70px;
   color: var(--primary-text);
   transition: all 0.5s ease-in;
   font-family: "Inter";
   font-style: normal;
-  word-spacing: 0px;
   letter-spacing: 0.5px;
-  word-spacing: 2px;
+  word-spacing: 0.5px;
   z-index: 1;
 }
 
@@ -239,9 +240,10 @@ main {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 27px;
   color: var(--secondary-text);
   transition: all 0.5s ease-in;
+  letter-spacing: 0.3px;
 }
 
 .hero-btns {
@@ -421,12 +423,13 @@ main {
   height: 48px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
   text-align: center;
   color: #535862;
-  line-height: 25px;
+  line-height: 29px;
   color: var(--secondary-text);
   transition: all 0.5s ease-in;
+  letter-spacing: 0.1px;
+  line-height: 25.5px;
 }
 
 /*<!-- ========================= -->
@@ -917,7 +920,7 @@ main {
   height: 44px;
   font-weight: 600;
   font-size: 36px;
-  line-height: 44px;
+  line-height: 41px;
   letter-spacing: 0.5px;
   color: var(--primary-text);
   transition: all 0.5s ease-in;
@@ -927,7 +930,7 @@ main {
   height: 30px;
   font-weight: 400;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 36px;
   color: var(--secondary-text);
   transition: all 0.5s ease-in;
   letter-spacing: 0.25px;
@@ -983,7 +986,7 @@ main {
   height: 24px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 15px;
   color: var(--secondary-text);
   transition: all 0.5s ease-in;
 }
@@ -992,10 +995,11 @@ main {
   height: 24px;
   font-weight: 600;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 27px;
   color: #6941c6;
   text-decoration: none;
   text-wrap: balance;
+  letter-spacing: 0.07px;
 }
 
 .contacts-card-info:nth-child(2),
@@ -1045,6 +1049,7 @@ footer {
   font-size: 16px;
   line-height: 24px;
   color: #d6bbfb;
+  word-spacing: 0.2px;
 }
 
 .footer-social {
@@ -1052,10 +1057,11 @@ footer {
   flex-direction: row;
   align-items: flex-end;
   padding: 0px;
-  gap: 25px;
+  gap: 24px;
   width: 168px;
   height: 24px;
   max-width: 168px;
+  line-height: 14px;
 }
 
 .footer-social svg:hover path {
@@ -1087,4 +1093,117 @@ footer {
   background-color: var(
     --project-btn-hover
   ); /* Add a dark-grey background on hover */
+}
+
+.navigation1 {
+  display: none;
+}
+
+@media (max-width: 599px) and (min-width: 375px) {
+  body {
+    width: 375px;
+    /* margin: 0 auto; */
+    padding: 0;
+    margin: 0;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .container {
+    margin: 0;
+    padding: 20px;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-content {
+    left: 0;
+    z-index: 1000;
+    padding: 0px;
+    height: 72px;
+    width: 375px;
+    max-width: 375px;
+    margin: 0;
+  }
+
+  .applet {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .icon {
+    margin-left: 15px;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px 16px;
+    width: 375px;
+    height: 372px;
+    margin: 90px 0px;
+  }
+
+  .hero-img img {
+    display: none;
+  }
+
+  .hero-with-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px;
+    width: 343px;
+    height: 372px;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 343px;
+    height: 232px;
+  }
+
+  .hero-title {
+    width: 343px;
+    height: 132px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    /* letter-spacing: -0.02em; */
+    color: #181d27;
+  }
+  .hero-p {
+    width: 343px;
+    height: 84px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #535862;
+  }
+  .hero-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 343px;
+    height: 108px;
+  }
 }
