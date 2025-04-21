@@ -23,6 +23,7 @@ html {
   --svg-theme-hover: #6941c6;
   --border-projects-btn: #d5d7da;
   --top-button: #414651;
+  --projects-hover-text: #252b37;
 }
 
 :root:has(#theme-toggle:checked) {
@@ -38,22 +39,23 @@ html {
   --project-info: #94979c;
   --border-projects-btn: #373a41;
   --top-button: #ffffff;
+  --projects-hover-text: #ffffff;
 }
 
 body {
   font-family: "Inter";
   display: block;
-  width: 1440px;
-  height: 5023px;
-  max-height: 4900px;
-  max-width: 1440px;
+  width: 90em;
+  height: 313.94em;
+  max-height: 306.25em;
+  max-width: 90em;
   background-color: var(--background-color);
   /* margin: 0 auto; */
   transition: all 0.5s ease-in;
 }
 
 .container {
-  width: 1440px;
+  width: 90em;
 }
 /*<!-- ========================= -->
   <!--         HEADER            -->
@@ -71,8 +73,8 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
-  margin: 0 80px;
+  height: 5em;
+  margin: 0 5em;
 }
 
 .logo a {
@@ -83,22 +85,22 @@ header {
 .icon {
   display: flex;
   justify-content: space-between;
-  width: 124px;
-  height: 24px;
-  margin-left: 32px;
+  width: 7.75em;
+  height: 1.5em;
+  margin-left: 2em;
 }
 
 .icon img {
-  margin-top: 3px;
+  margin-top: 0.1875em;
   display: inline-block;
-  width: 31px;
-  height: 19px;
+  width: 1.9375em;
+  height: 1.1875em;
 }
 
 .applet {
   display: inline-block;
-  width: 82px;
-  height: 24px;
+  width: 5.125em;
+  height: 1.5em;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -287,7 +289,7 @@ main {
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
-  color: var(--primary-text);
+  color: var(--top-button);
   background-color: var(--background-color);
   width: 120px;
   height: 60px;
@@ -300,11 +302,11 @@ main {
   border: 1px solid var(--border-projects-btn);
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.5s ease-in;
 }
 
 .projects-button:hover {
   background-color: var(--project-btn-hover);
+  color: var(--projects-hover-text);
 }
 
 .hero-img img {
@@ -1105,6 +1107,7 @@ footer {
     /* margin: 0 auto; */
     padding: 0;
     margin: 0;
+    font-family: "Inter";
   }
 
   .navigation {
@@ -1113,7 +1116,7 @@ footer {
 
   .container {
     margin: 0;
-    padding: 20px;
+    padding: 0 15px;
   }
 
   header {
@@ -1139,14 +1142,14 @@ footer {
     line-height: 24px;
   }
   .icon {
-    margin-left: 15px;
+    margin: 0px;
   }
 
   .hero-content {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px 16px;
+    padding: 0px;
     width: 375px;
     height: 372px;
     margin: 90px 0px;
@@ -1185,7 +1188,6 @@ footer {
     font-size: 36px;
     line-height: 44px;
     /* letter-spacing: -0.02em; */
-    color: #181d27;
   }
   .hero-p {
     width: 343px;
@@ -1195,7 +1197,6 @@ footer {
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
-    color: #535862;
   }
   .hero-btns {
     display: flex;
@@ -1205,5 +1206,56 @@ footer {
     gap: 12px;
     width: 343px;
     height: 108px;
+  }
+
+  .contact-button,
+  .projects-button {
+    padding: 12px 18px;
+    width: 343px;
+    height: 48px;
+    letter-spacing: -0.1px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /*<!-- ========================= -->
+  <!--           ABOUT           -->
+  <!-- ========================= -->*/
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 0px;
+    gap: 48px;
+    width: 375px;
+    height: 1414px;
+    margin: 0;
+    padding: 0;
+    /* height: auto; */
+  }
+
+  .about-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 343px;
+    height: 198px;
+    margin: 0;
+    padding: 0;
+    max-width: 343px;
+    /* height: a; */
+  }
+  .about-h3 {
+    width: 343px;
+    /* height: auto; */
+  }
+
+  .about-p {
+    width: 343px;
+    /* height: auto; */
   }
 }
