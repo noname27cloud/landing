@@ -1166,11 +1166,12 @@ footer {
   .about-card {
     margin: auto;
   }
+
   .slider-card {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
+    gap: 20px;
   }
   .faq-info {
     margin-left: auto;
