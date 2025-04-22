@@ -58,57 +58,73 @@ function formatProjectDuration(days) {
 
 function generateArticles(filter = "all") {
   const container = document.querySelector(".projects-articles");
-  container.innerHTML = ""; // очищаем старые статьи
 
-  fetch("assets/articles.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const filteredArticles =
-        filter === "all"
-          ? data
-          : data.filter((article) => article.tag.toLowerCase() === filter);
+  // Плавное исчезновение перед заменой контента
+  container.style.opacity = 0;
 
-      filteredArticles.forEach((article) => {
-        const articleDiv = document.createElement("div");
-        articleDiv.classList.add("slider-article");
+  setTimeout(() => {
+    container.innerHTML = ""; // очищаем старые статьи
 
-        const durationDays = article.meta.duration_days;
-        const formattedDuration = formatProjectDuration(durationDays);
+    fetch("assets/articles.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const filteredArticles =
+          filter === "all"
+            ? data
+            : data.filter((article) => article.tag.toLowerCase() === filter);
 
-        const techList = article.meta.technologies || [];
-        const worksList = article.meta.works || [];
-        const fullList = [...techList, ...worksList];
-        const formattedMeta = fullList.join(" | ");
+        filteredArticles.forEach((article, index) => {
+          const articleDiv = document.createElement("div");
+          articleDiv.classList.add("slider-article");
 
-        articleDiv.innerHTML = `
-          <div class="projects-article" data-delay="2000s">
-            <div class="article-image"> 
-              <img src="${article.articleImage}" alt="Article Image" class="article-img"/>
+          const durationDays = article.meta.duration_days;
+          const formattedDuration = formatProjectDuration(durationDays);
+
+          const techList = article.meta.technologies || [];
+          const worksList = article.meta.works || [];
+          const fullList = [...techList, ...worksList];
+          const formattedMeta = fullList.join(" | ");
+
+          articleDiv.innerHTML = `
+            <div class="projects-article">
+              <div class="article-image"> 
+                <img src="${article.articleImage}" alt="Article Image" class="article-img"/>
+              </div>
+              <div class="article-info">
+                <p class="article-tag">${article.tag}</p>
+                <h3 class="article-title">
+                  <a href="#" class="article-link">
+                    ${article.title}
+                    <svg class="article-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                </h3>
+                <p class="article-description">${article.description}</p>
+              </div>
+              <div class="article-data">
+                <p class="article-duration">${formattedDuration} | ${formattedMeta}</p>
+                <p class="article-created">${article.created_at}</p>
+              </div>
             </div>
-            <div class="article-info">
-              <p class="article-tag">${article.tag}</p>
-              <h3 class="article-title">
-                <a href="#" class="article-link">
-                  ${article.title}
-                  <svg class="article-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                       xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"
-                          stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </a>
-              </h3>
-              <p class="article-description">${article.description}</p>
-            </div>
-            <div class="article-data">
-              <p class="article-duration">${formattedDuration} | ${formattedMeta}</p>
-              <p class="article-created">${article.created_at}</p>
-            </div>
-          </div>
-        `;
+          `;
 
-        container.appendChild(articleDiv);
+          container.appendChild(articleDiv);
+
+          // ⚡ Добавляем анимацию с небольшой задержкой, чтобы успел отрисоваться DOM
+          requestAnimationFrame(() => {
+            articleDiv.classList.add("fade-in");
+          });
+        });
+
+        // Плавное появление всей секции
+        setTimeout(() => {
+          container.style.opacity = 1;
+        }, 150);
       });
-    });
+  }, 150); // немного времени на плавное исчезновение
 }
 
 document.querySelectorAll("nav ul li").forEach((item) => {

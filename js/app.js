@@ -150,7 +150,7 @@ function generateArticles() {
         const formattedMeta = fullList.join(" | ");
 
         articleDiv.innerHTML = `
-        <div class="projects-article" data-delay="2000s">
+        <div class="projects-article" >
           <div class="article-image"> 
             <img src="${article.articleImage}" alt="Article Image" class="article-img"/>
           </div>

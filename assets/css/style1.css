@@ -399,6 +399,11 @@ header {
   height: 2px;
   background-color: #53389e;
   z-index: 2;
+  transition: all 3s ease-in-out;
+}
+
+.projects-articles {
+  transition: opacity 0.3s ease-in-out;
 }
 
 /* .projects {
@@ -564,5 +569,49 @@ footer {
   .faq-info {
     width: auto;
     height: auto;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 375px) {
+  body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+  }
+
+  main {
+    padding: 0 15px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-content {
+    margin: 0;
+    width: 375px;
+    height: 72px;
+    /* background-color: #000000; */
+  }
+
+  .applet {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .icon {
+    margin-left: 15px;
   }
 }
