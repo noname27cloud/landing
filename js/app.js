@@ -57,6 +57,7 @@ function generateSlider() {
         infoContainer.appendChild(sliderDots);
 
         const imageContainer = document.createElement("div");
+        imageContainer.classList.add("slider-slider-image");
         const image = document.createElement("img");
         image.src = review.reviewImage;
         image.alt = "Review Image";

@@ -482,11 +482,6 @@ main {
   width: 100%;
   overflow: hidden;
 }
-.slider-content {
-  position: relative;
-  width: 100%;
-  height: 448px;
-}
 
 .slider-card {
   position: absolute;
@@ -1178,6 +1173,17 @@ footer {
     margin-right: auto;
     width: auto;
     height: auto;
+  }
+
+  .slider-card.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider-content {
+    width: 100%;
+    height: 1000px;
   }
 }
 
