@@ -1190,7 +1190,7 @@ footer {
 @media (max-width: 599px) and (min-width: 375px) {
   body {
     margin: 0;
-    padding: 0 15px;
+    /* padding: 0 15px; */
     height: auto;
   }
 
@@ -1207,8 +1207,9 @@ footer {
   }
 
   .header-content {
+    padding: 0px 15px;
     margin: 0;
-    width: 100%;
+    width: 375px;
     height: 72px;
   }
 
@@ -1225,6 +1226,7 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+
     padding: 0px;
     width: 375px;
     height: 372px;
@@ -1239,7 +1241,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
+    padding: 0px 15px;
     gap: 32px;
     width: 343px;
     height: 372px;
@@ -1248,6 +1250,7 @@ footer {
   .hero-text {
     width: auto;
     height: 232px;
+    gap: 18px;
   }
 
   .hero-title {
@@ -1258,17 +1261,15 @@ footer {
     font-weight: 600;
     font-size: 36px;
     line-height: 44px;
-    /* letter-spacing: -0.02em; */
   }
   .hero-p {
     width: 343px;
     height: 84px;
     min-height: 84px;
-    font-family: "Inter";
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
   }
   .hero-btns {
     display: flex;
@@ -1296,48 +1297,104 @@ footer {
   /*<!-- ========================= -->
   <!--           ABOUT           -->
   <!-- ========================= -->*/
+
   .about-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 0px;
-    margin: 0;
-    gap: 48px;
     width: 375px;
     height: 1414px;
-  }
-
-  .about-header {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 0;
-    width: 375px;
-    height: 198px;
-  }
-
-  .about-h3 {
-    width: 343px;
-    height: 20px;
-    font-size: 14px;
-    line-height: 20px;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
   }
 
+  .about-header {
+    height: 198px;
+    width: 375px;
+    margin-top: 37px;
+    margin-bottom: 67px;
+  }
+  .about-h3 {
+    width: 375px;
+    height: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    margin-left: -30px;
+    padding: 0;
+    margin: 0;
+  }
   .about-h2 {
-    /* width: 343px;
-    height: 38px; */
+    width: 343px;
+    height: 38px;
+    font-weight: 600;
     font-size: 30px;
     line-height: 38px;
     text-align: center;
+    letter-spacing: 0.7px;
   }
-
   .about-p {
     width: 343px;
+    max-width: 343px;
     height: 112px;
+    max-height: 112px;
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 500;
+    text-wrap: balance;
+    padding: 0;
+    margin: 0;
+  }
+
+  .about-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    margin: 0;
+    width: 343px;
+    /* gap: 40px; */
+    height: 1040px;
+  }
+
+  .about-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    margin: 0;
+    width: 343px;
+    min-width: 343px;
+    height: 136px;
+    /* gap: 45px; */
+  }
+
+  .about-cards .about-card img {
+    width: 40px;
+    height: 40px;
+  }
+  .about-icon h3 {
+    width: 343px;
+    height: 28px;
+    font-weight: 600;
     font-size: 18px;
     line-height: 28px;
     text-align: center;
+    letter-spacing: -0.1px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .about-cards .about-card .about-icon p {
+    height: 48px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    /* text-wrap: balance; */
   }
 }

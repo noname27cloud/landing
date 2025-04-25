@@ -5,3 +5,41 @@ to-do:
 
 3. Burger menu for mobile 599px and less
 
+
+.about-content {
+    width: 375px;
+    height: 1414px;
+  }
+
+  .about-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 375px;
+    height: 198px;
+  }
+
+  .about-h3 {
+    width: 343px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-h2 {
+    /* width: 343px;
+    height: 38px; */
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+  }
+
+  .about-p {
+    width: 343px;
+    height: 112px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
