@@ -438,6 +438,7 @@ main {
 /*<!-- ========================= -->
   <!--          SLIDER           -->
   <!-- ========================= -->*/
+
 .slider-content {
   display: flex;
   flex-direction: row;
@@ -487,7 +488,7 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 500px;
   height: 100%;
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
@@ -1344,8 +1345,8 @@ footer {
     font-size: 18px;
     line-height: 28px;
     text-align: center;
-    letter-spacing: -0.1px;
-    word-spacing: 1.7px;
+    letter-spacing: -0.09px;
+    word-spacing: 1.1px;
   }
   .about-cards {
     display: flex;
