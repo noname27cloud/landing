@@ -48,14 +48,7 @@ to-do:
 
 
     Burger menu
-     /* 
-  body {
-    margin-top: 50px;
-    padding: 0;
-    background: #232323;
-    color: #cdcdcd;
-    font-family: "Avenir Next", "Avenir", sans-serif;
-  } */
+
 
   main {
     width: calc(100% - 240px);
@@ -427,4 +420,3 @@ to-do:
     margin: 0;
     /* text-wrap: balance; */
   }
-  
