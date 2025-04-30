@@ -1,3 +1,22 @@
+function swapSection() {
+  const mediaQuery = window.matchMedia(
+    "(max-width: 599px) and (min-width: 375px)"
+  );
+  const faqSection = document.getElementById("faq");
+  const contactUsSection = document.getElementById("contacts");
+  const parent = faqSection.parentNode;
+
+  if (mediaQuery.matches) {
+    if (contactUsSection.nextElementSibling !== faqSection) {
+      parent.insertBefore(contactUsSection, faqSection);
+    }
+  } else {
+    if (faqSection.nextElementSibling !== contactUsSection) {
+      parent.insertBefore(faqSection, contactUsSection);
+    }
+  }
+}
+
 function generateSlider() {
   const sliderContent = document.querySelector(".slider-content");
 
@@ -155,20 +174,7 @@ function generateArticles() {
           <div class="article-image"> 
             <img src="${article.articleImage}" alt="Article Image" class="article-img"/>
           </div>
-          <div class="/* Image */
-
-width: 343px;
-height: 240px;
-
-background: url(shopping-online-landing-page-concept_23-2148539965.jpg);
-border-radius: 16px;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-">
+          <div class="article-info">
             <p class="article-tag">${article.tag}</p>
             <h3 class="article-title">
               <a href="#" class="article-link">
@@ -237,10 +243,8 @@ function faq() {
 }
 
 function topFunction() {
-  // Get the button:
   let mybutton = document.getElementById("myBtn");
 
-  // When the user scrolls down 20px from the top of the document, show the button
   window.onscroll = function () {
     scrollFunction();
   };
@@ -287,3 +291,5 @@ topFunction();
 faq();
 generateArticles();
 generateSlider();
+swapSection();
+window.addEventListener("resize", swapSection);
