@@ -1175,10 +1175,17 @@ footer {
   .faq-info {
     margin-left: auto;
     margin-right: auto;
-    width: auto;
+    width: 100% !important;
     height: auto;
   }
 
+  .faq-item,
+  .faqQuestion,
+  .faqAnswer {
+    width: 100% !important;
+    padding-left: 1% !important;
+    padding-right: 2% !important;
+  }
   .slider-card.active {
     display: flex;
     flex-direction: column;
@@ -1188,6 +1195,11 @@ footer {
   .slider-content {
     width: 100%;
     height: 1000px;
+  }
+
+  #myBtn {
+    right: 5%;
+    width: 50px;
   }
 }
 
@@ -1429,15 +1441,14 @@ footer {
   /*<!-- ========================= -->
   <!--          SLIDER           -->
   <!-- ========================= -->*/
-  .slider {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 64px 0px;
-    gap: 48px;
-    width: 375px;
-    min-height: 814px;
-    width: 100%;
+
+  .slider-image {
+    position: absolute;
+    width: 343px;
+    height: 280px;
+    left: 0px;
+    bottom: 0px !important;
+    border-radius: 20px;
   }
 
   /*<!-- ========================= -->
@@ -1621,8 +1632,8 @@ footer {
 
   .faq-item {
     padding: 24px 0px 0px;
-    width: 343px;
-    height: 80px;
+    width: 343px !important;
+    height: 80px !important;
   }
   .faqQuestion {
     box-sizing: border-box;
@@ -1732,9 +1743,8 @@ footer {
     height: 104px;
     flex-wrap: nowrap;
   }
+
   #myBtn {
-    display: none;
-    position: fixed;
     left: 20%;
     width: 50px;
   }

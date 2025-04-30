@@ -122,9 +122,9 @@ function generateArticles(filter = "all") {
         // Плавное появление всей секции
         setTimeout(() => {
           container.style.opacity = 1;
-        }, 150);
+        }, 200);
       });
-  }, 150); // немного времени на плавное исчезновение
+  }, 200); // немного времени на плавное исчезновение
 }
 
 document.querySelectorAll("nav ul li").forEach((item) => {
@@ -132,8 +132,6 @@ document.querySelectorAll("nav ul li").forEach((item) => {
     const query = e.target.textContent.trim().toLowerCase();
     if (query === "all") {
       fetchData().then((data) => generateArticles(data.results));
-    } else {
-      Search(query);
     }
   });
 });
