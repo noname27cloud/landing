@@ -228,12 +228,18 @@ function faq() {
         container.appendChild(faqElement);
 
         const toggleActive = () => {
-          faqElement.classList.toggle("active");
-          if (faqElement.classList.contains("active")) {
-            accord.src = faqItem.accordMinus;
-          } else {
-            accord.src = faqItem.accordPlus;
-          }
+          const allFaqItems = document.querySelectorAll(".faq-item");
+
+          allFaqItems.forEach((item) => {
+            if (item !== faqElement) {
+              item.classList.remove("active");
+              const icon = item.querySelector(".accord");
+              if (icon) icon.src = faqItem.accordPlus;
+            }
+          });
+
+          const isActive = faqElement.classList.toggle("active");
+          accord.src = isActive ? faqItem.accordMinus : faqItem.accordPlus;
         };
 
         quetionElement.addEventListener("click", toggleActive);

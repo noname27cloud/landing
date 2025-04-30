@@ -1625,21 +1625,28 @@ footer {
     letter-spacing: -0.1px;
   }
   .faq-info {
-    padding: 0px 16px;
+    /* padding: 0px 16px; */
     width: 375px !important;
     height: 740px !important;
   }
 
   .faq-item {
-    padding: 24px 0px 0px;
+    /* padding: 24px 0px 0px; */
     width: 343px !important;
-    height: 80px !important;
+    display: flex;
+    flex-wrap: wrap;
   }
-  .faqQuestion {
+  .faqQuestion,
+  .faqAnswer {
     box-sizing: border-box;
-    padding: 24px 0px 0px;
+    /* padding: 24px 0px 0px; */
     width: 343px !important;
-    height: 80px !important;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .faq-item.active .faqAnswer {
+    max-height: 72px;
   }
 
   /* <!-- ========================= -->
