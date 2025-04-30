@@ -1569,5 +1569,135 @@ footer {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    letter-spacing: -1px;
+  }
+  .projects-view-Btn {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 18px;
+    gap: 6px;
+    width: 343px;
+    height: 48px;
+  }
+  /*<!-- ========================= -->
+  <!--            FAQ            -->
+  <!-- ========================= -->*/
+
+  .faq-content {
+    padding: 64px 0px;
+    gap: 48px;
+    width: 375px;
+    height: 1064px;
+  }
+
+  .faq-header {
+    padding: 0px;
+    gap: 32px;
+    width: 343px;
+    height: 148px;
+  }
+  .faq-h2 {
+    width: 343px;
+    height: 76px;
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .faq-p {
+    width: 343px;
+    height: 56px;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.1px;
+  }
+  .faq-info {
+    padding: 0px 16px;
+    width: 375px !important;
+    height: 740px !important;
+  }
+
+  .faq-item {
+    padding: 24px 0px 0px;
+    width: 343px;
+    height: 80px;
+  }
+  .faqQuestion {
+    box-sizing: border-box;
+    padding: 24px 0px 0px;
+    width: 343px !important;
+    height: 80px !important;
+  }
+
+  /* <!-- ========================= -->
+  <!--          CONTACTS         -->
+  <!-- ========================= -->*/
+  .contacts-content {
+    padding: 64px 0px;
+    gap: 48px;
+    width: 375px;
+    height: 1478px;
+  }
+  .contacts-header {
+    padding: 0px 16px;
+    gap: 30px;
+    width: 375px;
+    height: 240px;
+  }
+  .contacts-h3 {
+    width: 343px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .contacts-h2 {
+    width: 343px;
+    height: 132px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .contacts-p {
+    width: 343px;
+    height: 60px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .contacts-info {
+    padding: 0px 16px;
+    width: 375px;
+    height: 1062px;
+  }
+  .contacts-card {
+    padding: 24px;
+    gap: 48px;
+    width: 343px;
+    height: 242px;
+  }
+  .contacts-card img {
+    width: 48px;
+    height: 48px;
+  }
+  .contacts-card-info {
+    padding: 0px;
+    gap: 16px;
+    width: 295px;
+    height: 98px;
+  }
+  .contacts-card-info h3 {
+    width: 295px;
+    height: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .contacts-card-info p {
+    width: 295px;
+    height: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
