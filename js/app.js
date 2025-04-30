@@ -155,7 +155,20 @@ function generateArticles() {
           <div class="article-image"> 
             <img src="${article.articleImage}" alt="Article Image" class="article-img"/>
           </div>
-          <div class="article-info">
+          <div class="/* Image */
+
+width: 343px;
+height: 240px;
+
+background: url(shopping-online-landing-page-concept_23-2148539965.jpg);
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+">
             <p class="article-tag">${article.tag}</p>
             <h3 class="article-title">
               <a href="#" class="article-link">
