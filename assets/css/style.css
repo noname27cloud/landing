@@ -1210,6 +1210,12 @@ footer {
     box-sizing: border-box;
     /* height: 732px; */
     margin: 0 auto;
+    width: 375px;
+  }
+
+  .container,
+  main {
+    width: 375px;
   }
   /*<!-- ========================= -->
   <!--         HEADER            -->
@@ -1276,8 +1282,8 @@ footer {
     width: 40px;
     height: 32px;
     position: absolute;
-    top: -7px;
-    left: -5px;
+    top: 7px;
+    left: 5px;
     cursor: pointer;
     opacity: 0;
     z-index: 2;
