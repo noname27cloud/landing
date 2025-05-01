@@ -44,7 +44,8 @@ body {
   font-family: "Inter";
   display: block;
   width: 1440px;
-  height: 2180px;
+  /* height: 2180px; */
+  height: auto;
   max-height: 2180px;
   max-width: 1440px;
   background-color: var(--background-color);
@@ -57,7 +58,8 @@ body {
 }
 
 main {
-  height: 1932px;
+  /* height: 1932px; */
+  height: auto;
 }
 
 /*<!-- ========================= -->
@@ -255,7 +257,7 @@ header {
   gap: 27px 32px;
   width: 1216px;
   bottom: 10px;
-  /* height: 464px; */
+  height: auto;
 }
 
 .projects-article {
@@ -574,44 +576,217 @@ footer {
 
 @media (max-width: 600px) and (min-width: 375px) {
   body {
-    margin: 0;
     padding: 0;
-    height: auto;
-  }
-
-  main {
-    padding: 0 15px;
-  }
-
-  .container {
-    width: 100%;
-  }
-
-  .navigation {
-    display: none;
-  }
-
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
     margin: 0;
-    padding: 0;
+    box-sizing: border-box;
+    /* height: 732px; */
+    margin: 0 auto;
+    width: 375px !important;
   }
-
+  /*<!-- ========================= -->
+  <!--         HEADER            -->
+  <!-- ========================= -->*/
   .header-content {
     margin: 0;
+    padding: 0 15px;
     width: 375px;
     height: 72px;
-    /* background-color: #000000; */
   }
-
+  .icon {
+    margin: 0;
+  }
   .applet {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
     font-size: 20px;
     line-height: 24px;
   }
+  .navigation {
+    display: none;
+  }
+  .projects {
+    width: 375px;
+  }
 
-  .icon {
-    margin-left: 15px;
+  /*<!-- ========================= -->
+  <!--          PROJECTS         -->
+  <!-- ========================= -->*/
+  main {
+    width: 375px;
+  }
+  .projects-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 90px 0px;
+    gap: 48px;
+    width: 375px;
+    /* height: 1890px; */
+    height: auto;
+    margin: 0;
+  }
+  .projects-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 18px;
+    width: 343px;
+    height: 208px;
+  }
+  .projects-content-with-p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 343px;
+    height: 108px;
+  }
+  .projects-h3 {
+    width: 360px;
+    height: 20px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .projects-h2 {
+    width: 343px;
+    height: 76px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 0.8px;
+  }
+  .projects-p {
+    width: 343px;
+    height: 84px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.1px;
+  }
+
+  .projects-articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 16px;
+    gap: 48px;
+    width: 375px;
+    height: 1506px;
+    height: auto;
+  }
+  .projects-article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    width: 343px;
+    height: 438px;
+  }
+  .article-image img {
+    width: 343px;
+    height: 240px;
+  }
+  .article-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 343px;
+    height: 114px;
+  }
+  .article-tag {
+    width: 343px;
+    height: 20px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .article-title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 343px;
+    height: 30px;
+  }
+  .article-link {
+    width: 343px;
+    height: 30px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .article-description {
+    width: 343px;
+    height: 48px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -1px;
+  }
+  .projects-view-Btn {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 18px;
+    gap: 6px;
+    width: 343px;
+    height: 48px;
+  }
+  .filter-container {
+    width: 375px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* <!-- ========================= -->
+  <!--          FOOTER           -->
+  <!-- ========================= -->*/
+  footer {
+    padding: 48px 0px;
+    gap: 48px;
+    width: 375px !important;
+    height: 200px;
+    padding-bottom: 148px;
+  }
+  .footer-content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 32px 0px 0px;
+    gap: 24px;
+    width: 343px !important;
+    height: 104px;
+    flex-wrap: nowrap;
+  }
+
+  #myBtn {
+    left: 20%;
+    width: 50px;
   }
 }
