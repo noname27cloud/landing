@@ -1253,9 +1253,11 @@ footer {
     /* height: 732px; */
     /* margin: 0 auto; */
     width: 375px !important;
+    overflow-x: hidden;
   }
   html {
     width: 375px !important;
+    /* overflow-x: hidden; */
   }
 
   .mobile-nav {
@@ -1307,7 +1309,7 @@ footer {
   .mobile-menu-button {
     position: absolute;
     top: -10px;
-    right: 16px;
+    right: 5px;
     width: 26px;
     height: 20px;
     cursor: pointer;
