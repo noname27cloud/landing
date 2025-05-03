@@ -214,16 +214,18 @@ function faq() {
         quetionElement.classList.add("faqQuestion");
         quetionElement.textContent = faqItem.question;
 
+        const accordContainer = document.createElement("div");
         const accord = document.createElement("img");
         accord.classList.add("accord");
         accord.src = faqItem.accordPlus;
+        accordContainer.appendChild(accord);
 
         const answerElement = document.createElement("div");
         answerElement.classList.add("faqAnswer");
         answerElement.textContent = faqItem.answer;
 
         faqElement.appendChild(quetionElement);
-        faqElement.appendChild(accord);
+        faqElement.appendChild(accordContainer);
         faqElement.appendChild(answerElement);
         container.appendChild(faqElement);
 
