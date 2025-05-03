@@ -1880,6 +1880,7 @@ footer {
     gap: 48px;
     width: 375px !important;
     height: 200px;
+    max-height: 200px;
   }
   .footer-content {
     display: flex;
