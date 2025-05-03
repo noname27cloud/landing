@@ -29,7 +29,7 @@
         </a>
       </div>
       <!-- ========================= -->
-      <!--  NAVIGATION, BURGER MENU  -->
+      <!--         NAVIGATION        -->
       <!-- ========================= -->
       <nav class="navigation">
         <ul class="menu-box">
@@ -48,38 +48,23 @@
       </nav>
 
       <!--FOR MOBILE-->
-      <nav role="navigation" class="navigation1">
-        <div class="menuToggle">
-          <input type="checkbox" id="menuCheckbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <li>
-              <a href="#about">
-                <label for="menuCheckbox" onclick="this.parentNode.click();">About</label>
-              </a>
-            </li>
-            <li>
-              <a href="#projects">
-                <label for="menuCheckbox" onclick="this.parentNode.click();">Projects</label>
-              </a>
-            </li>
-            <li>
-              <a href="#faq">
-                <label for="menuCheckbox" onclick="this.parentNode.click();">FAQ</label>
-              </a>
-            </li>
-            <li>
-              <a href="#contacts">
-                <label for="menuCheckbox" onclick="this.parentNode.click();">Contacts</label>
-              </a>
-            </li>
+      <!-- Внутри <header> -->
+      <nav class="mobile-nav">
+        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
+        <label for="mobile-menu-toggle" class="mobile-menu-button">
+          <span class="mobile-menu-icon"></span>
+        </label>
+
+        <div class="mobile-menu-container">
+          <ul class="mobile-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contacts">Contacts</a></li>
           </ul>
-        </div>
-        <div class="menuToggle-social">
-          <ul id="menu-social">
-            <li>
+
+          <div class="mobile-menu-footer">
+            <div class="mobile-social">
               <a href="https://www.threads.net/" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"
                   fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -87,8 +72,6 @@
                     fill="#E9D7FE" />
                 </svg>
               </a>
-            </li>
-            <li>
               <a href="https://ru.linkedin.com/" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"
                   fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_4064_3971)">
@@ -103,8 +86,6 @@
                   </defs>
                 </svg>
               </a>
-            </li>
-            <li>
               <a href="https://www.facebook.com/?locale=ru_RU" target="_blank"><svg width="24" height="24"
                   viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_4064_3974)">
@@ -119,8 +100,6 @@
                   </defs>
                 </svg>
               </a>
-            </li>
-            <li>
               <a href="https://github.com/" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_4064_3976)">
@@ -135,15 +114,15 @@
                   </defs>
                 </svg>
               </a>
-            </li>
-          </ul>
-          <li>
-            <input type="checkbox" id="theme-toggle" />
-            <label for="theme-toggle" class="theme-switch">
-              <img class="sun" src="assets/sun.svg" alt="Sun Icon" />
-              <img class="moon" src="assets/moon.svg" alt="Moon Icon" />
-            </label>
-          </li>
+            </div>
+            <div class="theme-switcher">
+              <input type="checkbox" id="theme-toggle" />
+              <label for="theme-toggle" class="theme-switch">
+                <img class="sun" src="assets/sun.svg" alt="Sun Icon" />
+                <img class="moon" src="assets/moon.svg" alt="Moon Icon" />
+              </label> <!-- Ваш переключатель темы -->
+            </div>
+          </div>
         </div>
       </nav>
     </div>

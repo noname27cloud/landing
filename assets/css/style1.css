@@ -579,7 +579,7 @@ footer {
     margin: 0;
     box-sizing: border-box;
     /* height: 732px; */
-    margin: 0 auto;
+    /* margin: 0 auto; */
     width: 375px !important;
   }
   /*<!-- ========================= -->
@@ -618,7 +618,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 90px 0px;
+    /* padding: 90px 0px; */
+    padding: 63px 0px;
     gap: 48px;
     width: 375px;
     /* height: 1890px; */
@@ -644,7 +645,7 @@ footer {
     height: 108px;
   }
   .projects-h3 {
-    width: 360px;
+    width: 343px;
     height: 20px;
     font-family: "Inter";
     font-style: normal;
@@ -652,6 +653,8 @@ footer {
     font-size: 14px;
     line-height: 20px;
     text-align: center;
+    margin: 0;
+    padding: 0;
   }
   .projects-h2 {
     width: 343px;
@@ -759,9 +762,9 @@ footer {
   .filter-container {
     width: 375px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
   }
+
   /* <!-- ========================= -->
   <!--          FOOTER           -->
   <!-- ========================= -->*/
@@ -777,7 +780,7 @@ footer {
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 32px 0px 0px;
+    /* padding: 32px 0px 0px; */
     gap: 24px;
     width: 343px !important;
     height: 104px;
@@ -785,7 +788,7 @@ footer {
   }
 
   #myBtn {
-    left: 20%;
+    left: 50%;
     width: 50px;
   }
 }
