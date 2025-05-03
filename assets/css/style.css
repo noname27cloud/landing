@@ -1259,6 +1259,10 @@ footer {
     width: 375px !important;
     /* overflow-x: hidden; */
   }
+  html,
+  body {
+    overflow-x: hidden;
+  }
 
   .mobile-nav {
     display: block;
