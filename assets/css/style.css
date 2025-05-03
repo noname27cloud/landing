@@ -1194,7 +1194,6 @@ footer {
   }
   .slider-content {
     width: 100%;
-    height: 1000px;
   }
 
   #myBtn {
@@ -1569,16 +1568,46 @@ footer {
   .slider {
     height: 814px !important;
   }
-  .slider-image {
-    position: absolute;
-    width: 343px;
-    height: 280px;
-    left: 0px;
-    bottom: 0px !important;
-    border-radius: 20px;
-    /* height: 814px !important; */
-  }
 
+  .slider-content {
+    display: flex;
+    flex-direction: column;
+    width: 343px;
+    height: 686px;
+    position: relative;
+    padding: 0;
+  }
+  .slider-card {
+    display: flex;
+    flex-direction: column;
+    width: 343px;
+    padding: 0;
+  }
+  .slider-info-container {
+    width: 295px;
+    height: 406px;
+    margin-top: 35px;
+    /* gap: -1px; */
+  }
+  .slider-name {
+    margin-top: 25px;
+  }
+  .slider-h2 {
+    width: 295px;
+    height: 160px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .slider-image {
+    width: 100%;
+    max-width: 343px;
+    height: 280px;
+    /* height: auto; */
+    border-radius: 0px 0px 16px 16px;
+    top: 406px;
+    object-fit: cover;
+  }
   /*<!-- ========================= -->
   <!--          PROJECTS         -->
   <!-- ========================= -->*/

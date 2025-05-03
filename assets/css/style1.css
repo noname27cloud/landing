@@ -360,7 +360,6 @@ header {
   display: flex;
   position: relative;
   border-bottom: 1px solid var(--secondary-text);
-  padding-left: -40px;
   gap: 3px;
   z-index: 0;
   flex-wrap: wrap;
