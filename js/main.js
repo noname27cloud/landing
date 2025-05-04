@@ -7,6 +7,9 @@ import { ThemeToggle } from "./themeToogle.js";
 import { setupMobileMenuAutoClose } from "./burger.js";
 import { GenerateArticles2 } from "./articles2.js";
 
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   setupMobileMenuAutoClose();
   ThemeToggle();
