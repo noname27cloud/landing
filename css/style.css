@@ -1257,9 +1257,17 @@ footer {
   }
   html {
     width: 375px !important;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
   }
 
+  header {
+    position: fixed; /* Фиксируем шапку */
+    top: 0;
+    left: 0;
+    width: 100%; /* На всю ширину экрана */
+    z-index: 1000; /* Чтобы был поверх других элементов */
+    background: var(--background-color); /* Фон как у body */
+  }
   .mobile-nav {
     display: block;
   }
@@ -1467,7 +1475,7 @@ footer {
   <!-- ========================= -->*/
   .hero-content {
     width: 375px;
-    height: 500px;
+    height: 572px;
     margin: 0;
     padding: 0;
   }
@@ -1479,7 +1487,7 @@ footer {
   .hero-with-btn {
     width: 343px;
     height: 372px;
-    padding: 25px 15px;
+    padding: 60px 15px;
     margin: 0;
     display: flex;
     gap: 38px;
@@ -1497,6 +1505,7 @@ footer {
   .hero-text {
     display: flex;
     gap: 20px;
+    width: 375px;
   }
 
   .hero-p {
