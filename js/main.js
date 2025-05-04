@@ -7,24 +7,38 @@ import { ThemeToggle } from "./themeToogle.js";
 import { setupMobileMenuAutoClose } from "./burger.js";
 import { GenerateArticles2 } from "./articles2.js";
 
+function initIndexPage() {
+  const articles = document.querySelector(".projects-articles");
+  const slider = document.querySelector(".slider-content");
+  const faq = document.querySelector(".faq");
 
+  if (articles) GenerateArticles();
+  if (slider) GenerateSlider();
+  if (faq) Faq();
 
+  SwapSection.run();
+  window.addEventListener("resize", SwapSection.run);
+}
 
-document.addEventListener("DOMContentLoaded", () => {
+function initIndex1Page() {
+  const articles2 = document.querySelector(".projects-articles_2");
+  if (articles2) GenerateArticles2();
+}
+
+// Гарантированно запускается после полной загрузки DOM
+window.addEventListener("DOMContentLoaded", () => {
   setupMobileMenuAutoClose();
   ThemeToggle();
   TopFunction();
-  const isIndex = window.location.pathname.endsWith("index.html");
-  const isIndex_2 = window.location.pathname.endsWith("index1.html");
 
-  if (isIndex) {
-    SwapSection.run();
-    window.addEventListener("resize", SwapSection.run);
-    GenerateSlider();
-    Faq();
-    GenerateArticles();
-  }
-  if (isIndex_2) {
-    GenerateArticles2();
+  const pathname = window.location.pathname;
+  if (
+    pathname.endsWith("index.html") ||
+    pathname === "/" ||
+    pathname === "/index.html"
+  ) {
+    initIndexPage();
+  } else if (pathname.endsWith("index1.html")) {
+    initIndex1Page();
   }
 });
