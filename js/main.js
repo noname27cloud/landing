@@ -7,13 +7,12 @@ import { ThemeToggle } from "./themeToogle.js";
 import { setupMobileMenuAutoClose } from "./burger.js";
 import { GenerateArticles2 } from "./articles2.js";
 
-const isIndex = window.location.pathname.endsWith("index.html");
-const isIndex_2 = window.location.pathname.endsWith("index1.html");
-
 document.addEventListener("DOMContentLoaded", () => {
   setupMobileMenuAutoClose();
   ThemeToggle();
   TopFunction();
+  const isIndex = window.location.pathname.endsWith("index.html");
+  const isIndex_2 = window.location.pathname.endsWith("index1.html");
 
   if (isIndex) {
     SwapSection.run();
