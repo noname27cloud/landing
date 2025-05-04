@@ -498,6 +498,9 @@ footer {
     --project-btn-hover
   ); /* Add a dark-grey background on hover */
 }
+.mobile-nav {
+  display: none;
+}
 
 @media (max-width: 1439px) and (min-width: 600px) {
   body {

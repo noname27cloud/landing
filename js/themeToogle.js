@@ -1,4 +1,4 @@
-export function themeToggle() {
+export function ThemeToggle() {
   const themeCheckbox = document.querySelector("#theme-toggle");
   const pageTheme = document.body;
   let currentTheme = localStorage.getItem("theme");

@@ -1,49 +1,3 @@
-function themeToggle() {
-  const themeCheckbox = document.querySelector("#theme-toggle");
-  const pageTheme = document.body;
-  let currentTheme = localStorage.getItem("theme");
-
-  if (!currentTheme) {
-    currentTheme = "light";
-    localStorage.setItem("theme", currentTheme);
-  }
-
-  if (currentTheme === "dark") {
-    pageTheme.classList.add("dark-theme");
-    themeCheckbox.checked = true;
-  }
-
-  themeCheckbox.addEventListener("change", () => {
-    pageTheme.classList.toggle("dark-theme");
-    const theme = pageTheme.classList.contains("dark-theme") ? "dark" : "light";
-    localStorage.setItem("theme", theme);
-  });
-}
-
-function topFunction() {
-  // Get the button:
-  let mybutton = document.getElementById("myBtn");
-
-  // When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function () {
-    scrollFunction();
-  };
-
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 300 ||
-      document.documentElement.scrollTop > 300
-    ) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-  }
-
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
 function formatProjectDuration(days) {
   if (days < 1) return "1 day";
   if (days < 7) return `${days} day${days > 1 ? "s" : ""}`;
@@ -158,36 +112,7 @@ document.querySelectorAll(".filter-container .tab").forEach((button) => {
   });
 });
 
-function setupMobileMenuAutoClose() {
-  const checkbox = document.querySelector("#mobile-menu-toggle");
-  const menuLinks = document.querySelectorAll(".mobile-menu a");
-  const themeToggle = document.querySelector("#theme-toggle"); // Замените на свой селектор, если другой
-  const mobileMenuContainer = document.querySelector(".mobile-menu-container");
-
-  // Закрытие меню
-  function closeMenu() {
-    if (checkbox && checkbox.checked) {
-      checkbox.checked = false;
-    }
-  }
-
-  // Клик по ссылке в меню
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", closeMenu);
-  });
-
-  // Клик по кнопке смены темы
-  if (themeToggle) {
-    themeToggle.addEventListener("click", closeMenu);
-  }
-
-  // Изменение размеров окна
-  window.addEventListener("resize", closeMenu);
-}
-
 // Инициализация после загрузки DOM
 document.addEventListener("DOMContentLoaded", setupMobileMenuAutoClose);
 
-themeToggle();
-topFunction();
 generateArticles();
