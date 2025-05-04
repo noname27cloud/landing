@@ -2,38 +2,38 @@
   "faq": [
     {
       "question": "Do you develop both websites and mobile apps?",
-      "accordMinus": "assets/accordMinus.svg",
-      "accordPlus": "assets/accordPlus.svg",
+      "accordMinus": "assets/faq/accordMinus.svg",
+      "accordPlus": "assets/faq/accordPlus.svg",
       "answer": "Yes, we specialize in developing both websites and mobile applications. Our team ensures that each project is tailored to meet your business goals, whether it’s a website, a web application, or a mobile app for iOS and Android."
     },
     {
       "question": "How long does it take to develop a project?",
-      "accordMinus": "assets/accordMinus.svg",
-      "accordPlus": "assets/accordPlus.svg",
+      "accordMinus": "assets/faq/accordMinus.svg",
+      "accordPlus": "assets/faq/accordPlus.svg",
       "answer": "The development timeline varies depending on the complexity and scope of the project. Generally, websites may take anywhere from a few weeks to a few months, while mobile apps may take longer due to additional testing and platform requirements."
     },
     {
       "question": "What technologies do you use?",
-      "accordMinus": "assets/accordMinus.svg",
-      "accordPlus": "assets/accordPlus.svg",
+      "accordMinus": "assets/faq/accordMinus.svg",
+      "accordPlus": "assets/faq/accordPlus.svg",
       "answer": "We use a variety of technologies depending on the project requirements. For websites, we work with HTML, CSS, JavaScript, React, and CMS platforms like WordPress. For mobile apps, iOS (Swift) and Android (Kotlin)."
     },
     {
       "question": "Can you redesign an existing website or app?",
-      "accordMinus": "assets/accordMinus.svg",
-      "accordPlus": "assets/accordPlus.svg",
+      "accordMinus": "assets/faq/accordMinus.svg",
+      "accordPlus": "assets/faq/accordPlus.svg",
       "answer": "Yes, we can help redesign your website or app to give it a fresh, modern look while improving functionality. Our design team ensures a smooth transition to a new design, preserving your product's core features and aligning with your goals."
     },
     {
       "question": "Do you provide post-launch support?",
-      "accordMinus": "assets/accordMinus.svg",
-      "accordPlus": "assets/accordPlus.svg",
+      "accordMinus": "assets/faq/accordMinus.svg",
+      "accordPlus": "assets/faq/accordPlus.svg",
       "answer": "Absolutely! We offer ongoing support and maintenance after your project goes live. This includes bug fixes, updates, performance monitoring, ensuring that your website or app continues to perform at its best."
     },
     {
       "question": "How do I get a quote for my project?",
-      "accordMinus": "assets/accordMinus.svg",
-      "accordPlus": "assets/accordPlus.svg",
+      "accordMinus": "assets/faq/accordMinus.svg",
+      "accordPlus": "assets/faq/accordPlus.svg",
       "answer": "To receive a quote, simply get in touch with us and provide a brief overview of your project requirements. After discussing your goals and understanding the scope of the project, we’ll provide a detailed proposal with pricing estimates tailored to your needs."
     }
   ]

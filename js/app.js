@@ -20,7 +20,7 @@ function swapSection() {
 function generateSlider() {
   const sliderContent = document.querySelector(".slider-content");
 
-  fetch("assets/infoSlider.json")
+  fetch("assets/slider/infoSlider.json")
     .then((response) => response.json())
     .then((data) => {
       const reviews = data.reviews;
@@ -151,7 +151,7 @@ function formatProjectDuration(days) {
 function generateArticles() {
   const container = document.querySelector(".projects-articles");
 
-  fetch("assets/articles.json")
+  fetch("assets/projects/articles.json")
     .then((response) => response.json())
     .then((data) => {
       const shuffled = data.sort(() => 0.5 - Math.random());
@@ -203,7 +203,7 @@ function generateArticles() {
 function faq() {
   const container = document.querySelector(".faq-info");
 
-  fetch("assets/faq.json")
+  fetch("assets/faq/faq.json")
     .then((response) => response.json())
     .then((data) => {
       data.faq.forEach((faqItem) => {
@@ -302,6 +302,36 @@ function themeToggle() {
     localStorage.setItem("theme", theme);
   });
 }
+
+function setupMobileMenuAutoClose() {
+  const checkbox = document.querySelector("#mobile-menu-toggle");
+  const menuLinks = document.querySelectorAll(".mobile-menu a");
+  const themeToggle = document.querySelector("#theme-toggle"); // Замените на свой селектор, если другой
+  const mobileMenuContainer = document.querySelector(".mobile-menu-container");
+
+  // Закрытие меню
+  function closeMenu() {
+    if (checkbox && checkbox.checked) {
+      checkbox.checked = false;
+    }
+  }
+
+  // Клик по ссылке в меню
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Клик по кнопке смены темы
+  if (themeToggle) {
+    themeToggle.addEventListener("click", closeMenu);
+  }
+
+  // Изменение размеров окна
+  window.addEventListener("resize", closeMenu);
+}
+
+// Инициализация после загрузки DOM
+document.addEventListener("DOMContentLoaded", setupMobileMenuAutoClose);
 
 themeToggle();
 topFunction();

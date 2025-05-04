@@ -1259,10 +1259,6 @@ footer {
     width: 375px !important;
     /* overflow-x: hidden; */
   }
-  html,
-  body {
-    overflow-x: hidden;
-  }
 
   .mobile-nav {
     display: block;
@@ -1310,6 +1306,10 @@ footer {
     display: none;
   }
 
+  .mobile-nav {
+    width: 100%;
+  }
+
   .mobile-menu-button {
     position: absolute;
     top: -10px;
@@ -1327,7 +1327,7 @@ footer {
     display: block;
     width: 26px;
     height: 2px;
-    background: #000;
+    background: var(--logo-text);
     position: absolute;
     transition: all 0.3s ease;
   }
@@ -1364,7 +1364,7 @@ footer {
     right: -100vw;
     width: 100vw;
     height: calc(100vh - 72px);
-    background: #fff;
+    background: var(--background-color);
     transition: transform 0.3s ease;
     z-index: 999;
     display: flex;
@@ -1392,7 +1392,7 @@ footer {
   }
 
   .mobile-menu a {
-    color: #232323;
+    color: var(--primary-text);
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
@@ -2030,7 +2030,7 @@ footer {
   }
 
   #myBtn {
-    left: 80%;
+    left: 50%;
     width: 50px;
   }
 }

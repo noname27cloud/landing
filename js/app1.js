@@ -65,7 +65,7 @@ function generateArticles(filter = "all") {
   setTimeout(() => {
     container.innerHTML = ""; // очищаем старые статьи
 
-    fetch("assets/articles.json")
+    fetch("assets/projects/articles.json")
       .then((response) => response.json())
       .then((data) => {
         const filteredArticles =
@@ -157,6 +157,36 @@ document.querySelectorAll(".filter-container .tab").forEach((button) => {
     generateArticles(tagFilter);
   });
 });
+
+function setupMobileMenuAutoClose() {
+  const checkbox = document.querySelector("#mobile-menu-toggle");
+  const menuLinks = document.querySelectorAll(".mobile-menu a");
+  const themeToggle = document.querySelector("#theme-toggle"); // Замените на свой селектор, если другой
+  const mobileMenuContainer = document.querySelector(".mobile-menu-container");
+
+  // Закрытие меню
+  function closeMenu() {
+    if (checkbox && checkbox.checked) {
+      checkbox.checked = false;
+    }
+  }
+
+  // Клик по ссылке в меню
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Клик по кнопке смены темы
+  if (themeToggle) {
+    themeToggle.addEventListener("click", closeMenu);
+  }
+
+  // Изменение размеров окна
+  window.addEventListener("resize", closeMenu);
+}
+
+// Инициализация после загрузки DOM
+document.addEventListener("DOMContentLoaded", setupMobileMenuAutoClose);
 
 themeToggle();
 topFunction();

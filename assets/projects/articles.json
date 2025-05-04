@@ -1,6 +1,6 @@
 [
   {
-    "articleImage": "assets/articles/urbanArticle.jpeg",
+    "articleImage": "assets/projects/urbanArticle.jpeg",
     "tag": "Website",
     "title": "Urban Ride Hub",
     "description": "Created a bike rental site with real-time availability, routes, and membership management.",
@@ -11,7 +11,7 @@
     "created_at": "20 Apr 2022"
   },
   {
-    "articleImage": "assets/articles/fitnessArticle.jpeg",
+    "articleImage": "assets/projects/fitnessArticle.jpeg",
     "tag": "Website",
     "title": "Fitness Community",
     "description": "Built a vibrant site for fitness enthusiasts with blog integration and workout plans.",
@@ -23,7 +23,7 @@
     "created_at": "30 May 2024"
   },
   {
-    "articleImage": "assets/articles/revoArticle.png",
+    "articleImage": "assets/projects/revoArticle.png",
     "tag": "Website",
     "title": "E-commerce Revolution",
     "description": "E-commerce Revolution: Built a dynamic store with seamless payments and recommendations.",
@@ -34,7 +34,7 @@
     "created_at": "18 Jan 2024"
   },
   {
-    "articleImage": "assets/articles/eventArticle.jpeg",
+    "articleImage": "assets/projects/eventArticle.jpeg",
     "tag": "Application",
     "title": "EventPlanner Pro",
     "description": "Built an event app with RSVP tracking, calendar integration, and guest list management.",
@@ -45,7 +45,7 @@
     "created_at": "17 Jan 2023"
   },
   {
-    "articleImage": "assets/articles/corpArticle.jpeg",
+    "articleImage": "assets/projects/corpArticle.jpeg",
     "tag": "Website",
     "title": "Corporate Branding",
     "description": "Built a professional corporate site with customized branding and real-time updates.",
@@ -57,7 +57,7 @@
     "created_at": "16 Aug 2022"
   },
   {
-    "articleImage": "assets/articles/eduArticle.png",
+    "articleImage": "assets/projects/eduArticle.png",
     "tag": "Application",
     "title": "EduLearn",
     "description": "Designed an e-learning platform featuring video lessons, quizzes, and progress tracking.",
@@ -68,7 +68,7 @@
     "created_at": "15 Jan 2025"
   },
   {
-    "articleImage": "assets/articles/techArticle.jpeg",
+    "articleImage": "assets/projects/techArticle.jpeg",
     "tag": "Website",
     "title": "Tech Startup Site",
     "description": "Designed a modern and fast-loading website to highlight a new tech startup’s services.",
@@ -80,7 +80,7 @@
     "created_at": "14 Jan 2025"
   },
   {
-    "articleImage": "assets/articles/portArticle.png",
+    "articleImage": "assets/projects/portArticle.png",
     "tag": "Application",
     "title": "Portfolio Perfection",
     "description": "Designed a stylish, modern portfolio to highlight creative work with elegance and efficiency.",
@@ -91,7 +91,7 @@
     "created_at": "10 Jan 2023"
   },
   {
-    "articleImage": "assets/articles/nonArticle.jpeg",
+    "articleImage": "assets/projects/nonArticle.jpeg",
     "tag": "Website",
     "title": "Non-Profit Impact",
     "description": "Launched a fundraising website with integrated donation tracking and volunteer coordination.",
