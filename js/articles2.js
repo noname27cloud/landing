@@ -1,7 +1,7 @@
 import { FormatProjectDuration } from "./projectDays.js";
 
-export function GenerateArticles_2() {
-  const container = document.querySelector(".projects-articles_2");
+export function GenerateArticles2() {
+  const container = document.querySelector(".projects-articles");
 
   function generateArticles(filter = "all") {
     container.style.opacity = 0;

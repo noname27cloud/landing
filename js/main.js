@@ -5,26 +5,24 @@ import { Faq } from "./faq.js";
 import { TopFunction } from "./teenTop.js";
 import { ThemeToggle } from "./themeToogle.js";
 import { setupMobileMenuAutoClose } from "./burger.js";
-import { GenerateArticles_2 } from "./articles2.js";
+import { GenerateArticles2 } from "./articles2.js";
 
-SwapSection.run();
-window.addEventListener("resize", SwapSection.run);
-GenerateSlider();
-Faq();
-TopFunction();
-ThemeToggle();
-document.addEventListener("DOMContentLoaded", setupMobileMenuAutoClose);
+const isIndex = window.location.pathname.endsWith("index.html");
+const isIndex_2 = window.location.pathname.endsWith("index1.html");
+
 document.addEventListener("DOMContentLoaded", () => {
-  if (document.querySelector(".projects-articles")) {
+  setupMobileMenuAutoClose();
+  ThemeToggle();
+  TopFunction();
+
+  if (isIndex) {
+    SwapSection.run();
+    window.addEventListener("resize", SwapSection.run);
+    GenerateSlider();
+    Faq();
     GenerateArticles();
   }
-  if (document.querySelector(".projects-articles_2")) {
-    GenerateArticles_2();
-  }
-  if (!document.querySelector("index.html")) {
-    GenerateArticles_2();
-    TopFunction();
-    ThemeToggle();
-    setupMobileMenuAutoClose();
+  if (isIndex_2) {
+    GenerateArticles2();
   }
 });
