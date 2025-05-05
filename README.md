@@ -37,6 +37,7 @@ const techStack = [
 
 ## 🌳 Project Structure Tree
 
+```
 📦 project-root
 ├── 📂 assets # All media assets
 │ ├── 📂 about/ # About section images
@@ -68,3 +69,4 @@ const techStack = [
 ├── 📄 index.html # Main production page
 ├── 📄 index1.html # Development/alt page
 └── 📄 README.md # Project documentation
+```
