@@ -1571,7 +1571,7 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 52px;
-    width: clamp(375px, 95vw, 599px);
+    width: clamp(375px, 100vw, 599px);
     min-height: 1414px;
     height: 100%;
     margin: 0;
