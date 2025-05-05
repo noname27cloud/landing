@@ -451,6 +451,7 @@ main {
   background: #53389e;
   border-radius: 24px;
   margin: 95px auto;
+  touch-action: manipulation;
 }
 
 .slider-info-container {
@@ -554,6 +555,7 @@ main {
   display: flex;
   overflow: hidden;
   position: relative;
+  touch-action: manipulation;
 }
 
 .slider-card.active {
@@ -1208,6 +1210,7 @@ footer {
     height: 686px;
     position: relative;
     padding: 0;
+    touch-action: manipulation;
   }
   .slider-card {
     display: flex;
@@ -1710,6 +1713,7 @@ footer {
     height: 686px;
     position: relative;
     padding: 0;
+    touch-action: manipulation;
   }
   .slider-card {
     display: flex;

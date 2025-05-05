@@ -50,23 +50,23 @@ const techStack = [
 │ └── 📂 theme/ # Theme-related assets
 │
 ├── 📂 css # Stylesheets
-│ ├── 🎨 style.css # Main styles (production)
-│ └── 🎨 style1.css # Alternative styles (dev)
+│ ├── 🎨 style.css # Main page styles (index.html)
+│ └── 🎨 style1.css # Projects page styles (index1.html)
 │
 ├── 📂 js # JavaScript modules
-│ ├── 📜 articles.js # Project articles logic
-│ ├── 📜 articles2.js # Alternative articles logic
+│ ├── 📜 articles.js # Articles logic for main page
+│ ├── 📜 articles2.js  # Articles logic for projects page (index1.html)
 │ ├── 🍔 burger.js # Mobile menu functionality
 │ ├── ❓ faq.js # Accordion implementation
 │ ├── 🎠 generateSlider.js # Slider generator
-│ ├── 📜 main.js # Core application logic
-│ ├── 📜 main1.js # Alternative entry point
+│ ├── 📜 main.js # Core script for index.html
+│ ├── 📜 main1.js # Core script for index1.html
 │ ├── ⏳ projectDays.js # Project duration calculator
 │ ├── 🔄 swapSection.js # Section switcher
 │ ├── 🔝 teenTop.js # "To top" button logic
 │ └── 🌓 themeToogle.js # Theme switcher
 │
-├── 📄 index.html # Main production page
-├── 📄 index1.html # Development/alt page
+├── 📄 index.html  # Main landing page
+├── 📄 index1.html  # Projects page
 └── 📄 README.md # Project documentation
 ```
