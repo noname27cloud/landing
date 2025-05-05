@@ -194,7 +194,7 @@ header {
 }
 
 main {
-  margin-top: -27.5px;
+  padding-top: 50px;
 }
 
 .hero-with-btn {
@@ -1000,6 +1000,9 @@ main {
   text-wrap: balance;
   letter-spacing: 0.07px;
 }
+.contacts-card-info a:hover {
+  color: var(--logo-text);
+}
 
 .contacts-card-info:nth-child(2),
 .contacts-card-info:nth-child(3) {
@@ -1247,6 +1250,19 @@ footer {
   .mobile-nav {
     display: none;
   }
+  .header-content {
+    margin: 0;
+    padding: 0 15px;
+    width: clamp(600px, 100vw, 1440px);
+    height: 72px;
+    align-items: center;
+    position: relative;
+  }
+  .hero-title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 44px;
+  }
 }
 
 @media (max-width: 599px) and (min-width: 375px) {
@@ -1256,11 +1272,11 @@ footer {
     box-sizing: border-box;
     /* height: 732px; */
     /* margin: 0 auto; */
-    width: 375px !important;
+    width: clamp(375px, 100vw, 599px);
     overflow-x: hidden;
   }
   html {
-    width: 375px !important;
+    width: clamp(375px, 100vw, 599px);
     overflow-x: hidden;
   }
 
@@ -1270,14 +1286,13 @@ footer {
     left: 0;
     width: 100%; /* На всю ширину экрана */
     z-index: 1000; /* Чтобы был поверх других элементов */
-    background: var(--background-color); /* Фон как у body */
   }
   .mobile-nav {
     display: block;
   }
   .container,
   main {
-    width: 375px;
+    width: clamp(375px, 100vw, 599px);
   }
   /*<!-- ========================= -->
   <!--         HEADER            -->
@@ -1285,7 +1300,7 @@ footer {
   .header-content {
     margin: 0;
     padding: 0 15px;
-    width: 375px !important;
+    width: clamp(375px, 100vw, 599px);
     height: 72px;
     align-items: center;
     position: relative;
@@ -1478,7 +1493,7 @@ footer {
   <!--         HERO SECTION      -->
   <!-- ========================= -->*/
   .hero-content {
-    width: 375px;
+    width: clamp(375px, 95vw, 599px);
     height: 572px;
     margin: 0;
     padding: 0;
@@ -1489,7 +1504,7 @@ footer {
   }
 
   .hero-with-btn {
-    width: 343px;
+    width: clamp(343px, 95vw, 599px);
     height: 372px;
     padding: 60px 15px;
     margin: 0;
@@ -1498,7 +1513,7 @@ footer {
   }
 
   .hero-title {
-    width: 343px;
+    width: clamp(343px, 95vw, 599px);
     height: 132px;
     font-family: "Inter";
     font-style: normal;
@@ -1509,11 +1524,11 @@ footer {
   .hero-text {
     display: flex;
     gap: 20px;
-    width: 375px;
+    width: clamp(375px, 95vw, 599px);
   }
 
   .hero-p {
-    width: 343px;
+    width: clamp(343px, 95vw, 599px);
     height: 84px;
     font-family: "Inter";
     font-style: normal;
@@ -1528,14 +1543,14 @@ footer {
     align-items: flex-start;
     padding: 0px;
     gap: 12px;
-    width: 343px;
+    width: clamp(343px, 95vw, 567px);
     height: 108px;
   }
 
   .contact-button,
   .projects-button {
     padding: 12px 18px;
-    width: 343px;
+    width: clamp(343px, 95vw, 567px);
     height: 48px;
     letter-spacing: -0.1px;
     font-family: "Inter";
@@ -1553,7 +1568,7 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 52px;
-    width: 375px;
+    width: clamp(375px, 95vw, 599px);
     min-height: 1414px;
     height: 100%;
     margin: 0;
@@ -1564,14 +1579,14 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 0px;
-    width: 343px;
+    width: clamp(343px, 95vw, 599px);
     height: 198px;
     margin: 0;
     margin-top: 88px;
     gap: 9px;
   }
   .about-h3 {
-    width: 343px;
+    width: clamp(343px, 95vw, 599px);
     height: 20px;
     font-family: "Inter";
     font-style: normal;
@@ -1581,7 +1596,7 @@ footer {
     text-align: center;
   }
   .about-h2 {
-    width: 343px;
+    width: clamp(343px, 95vw, 599px);
     height: 38px;
     font-family: "Inter";
     font-style: normal;
@@ -1592,7 +1607,7 @@ footer {
     letter-spacing: 0.9px;
   }
   .about-p {
-    width: 343px;
+    width: clamp(343px, 95vw, 599px);
     height: 112px;
     font-family: "Inter";
     font-style: normal;
@@ -1655,7 +1670,7 @@ footer {
     margin: 0;
   }
   .about-icon p {
-    width: 343px;
+    width: clamp(343px, 85vw, 599px);
     /* height: 72px; */
     font-family: "Inter";
     font-style: normal;
@@ -1737,7 +1752,7 @@ footer {
     padding: 90px 0px;
     /* padding: 0; */
     gap: 48px;
-    width: 375px;
+    width: clamp(375px, 100vw, 599px);
     height: 1890px;
     margin: 0;
   }
@@ -1811,6 +1826,7 @@ footer {
     width: 343px;
     height: 438px;
   }
+
   .article-image img {
     width: 343px;
     height: 240px;
@@ -1879,7 +1895,7 @@ footer {
   .faq-content {
     padding: 90px 0px;
     gap: 48px;
-    width: 375px;
+    width: clamp(343px, 100vw, 599px);
     height: 1064px;
     margin-bottom: 25px;
   }
@@ -1887,17 +1903,17 @@ footer {
   .faq-header {
     padding: 0px;
     gap: 20px;
-    width: 343px;
+    width: clamp(343px, 100vw, 599px);
     height: 148px;
   }
   .faq-h2 {
-    width: 343px;
+    width: clamp(343px, 100vw, 599px);
     height: 76px;
     font-size: 30px;
     line-height: 38px;
   }
   .faq-p {
-    width: 343px;
+    width: clamp(343px, 100vw, 599px);
     height: 56px;
     font-size: 18px;
     line-height: 28px;
@@ -1940,7 +1956,7 @@ footer {
   .contacts-content {
     padding: 90px 0px;
     gap: 50px;
-    width: 375px;
+    width: clamp(343px, 100vw, 599px);
     height: 1478px;
   }
   .contacts-header {
@@ -2026,7 +2042,7 @@ footer {
   footer {
     padding: 48px 0px;
     gap: 48px;
-    width: 375px !important;
+    width: clamp(343px, 100vw, 599px);
     height: 200px;
     max-height: 200px;
   }

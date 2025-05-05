@@ -49,7 +49,7 @@ body {
   max-height: 2180px;
   max-width: 1440px;
   background-color: var(--background-color);
-  /* margin: 0 auto; */
+  margin: 0 auto;
   transition: all 0.5s ease-in;
 }
 
@@ -579,14 +579,14 @@ footer {
   }
 }
 
-@media (max-width: 600px) and (min-width: 375px) {
+@media (max-width: 599px) and (min-width: 375px) {
   body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     /* height: 732px; */
     /* margin: 0 auto; */
-    width: 375px !important;
+    width: clamp(375px, 100vw, 599px);
   }
   /*<!-- ========================= -->
   <!--         HEADER            -->
@@ -597,7 +597,7 @@ footer {
   }
   .container,
   main {
-    width: 375px;
+    width: clamp(375px, 100vw, 599px);
   }
   /*<!-- ========================= -->
   <!--         HEADER            -->
@@ -605,10 +605,17 @@ footer {
   .header-content {
     margin: 0;
     padding: 0 15px;
-    width: 375px !important;
+    width: clamp(375px, 100vw, 599px);
     height: 72px;
     align-items: center;
     position: relative;
+  }
+  header {
+    position: fixed; /* Фиксируем шапку */
+    top: 0;
+    left: 0;
+    width: 100%; /* На всю ширину экрана */
+    z-index: 1000; /* Чтобы был поверх других элементов */
   }
   .icon {
     margin: 0;
@@ -795,7 +802,7 @@ footer {
   <!--          PROJECTS         -->
   <!-- ========================= -->*/
   main {
-    width: 375px;
+    width: clamp(375px, 100vw, 599px);
   }
   .projects-content {
     display: flex;
@@ -804,7 +811,7 @@ footer {
     /* padding: 90px 0px; */
     padding: 63px 0px;
     gap: 48px;
-    width: 375px;
+    width: clamp(375px, 100vw, 599px);
     /* height: 1890px; */
     height: auto;
     margin: 0;
@@ -813,9 +820,9 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
+    padding-top: 20px;
     gap: 18px;
-    width: 343px;
+    width: clamp(343px, 100vw, 599px);
     height: 208px;
   }
   .projects-content-with-p {
@@ -954,7 +961,7 @@ footer {
   footer {
     padding: 48px 0px;
     gap: 48px;
-    width: 375px !important;
+    width: clamp(375px, 100vw, 599px);
     height: 200px;
     padding-bottom: 148px;
   }
