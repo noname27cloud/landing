@@ -1,10 +1,9 @@
 export function setupMobileMenuAutoClose() {
   const checkbox = document.querySelector("#mobile-menu-toggle");
   const menuLinks = document.querySelectorAll(".mobile-menu a");
-  const themeToggle = document.querySelector("#theme-toggle"); // Замените на свой селектор, если другой
+  const themeToggle = document.querySelector("#theme-toggle");
   const mobileMenuContainer = document.querySelector(".mobile-menu-container");
 
-  // Закрытие меню
   function closeMenu() {
     if (checkbox && checkbox.checked) {
       checkbox.checked = false;

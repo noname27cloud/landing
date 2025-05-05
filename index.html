@@ -1,529 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Applet</title>
-    <link rel="icon" href="assets/icon/icon.svg" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <!-- ========================= -->
-    <!--         HEADER            -->
-    <!-- ========================= -->
-    <header class="header container" id="header">
-      <div class="header-content">
-        <div class="logo">
-          <a href="#">
-            <div class="icon">
-              <img src="assets/icon/icon.svg" alt="Applet Icon" />
-              <span class="applet">Applet</span>
-            </div>
-          </a>
-        </div>
-        <!-- ========================= -->
-        <!--         NAVIGATION        -->
-        <!-- ========================= -->
-        <nav class="navigation">
-          <ul class="menu-box">
-            <li><a class="menu-item" href="#about">About</a></li>
-            <li><a class="menu-item" href="#projects">Projects</a></li>
-            <li><a class="menu-item" href="#faq">FAQ</a></li>
-            <li><a class="menu-item" href="#contacts">Contacts</a></li>
-            <li>
-              <input type="checkbox" id="theme-toggle" />
-              <label for="theme-toggle" class="theme-switch">
-                <img class="sun" src="assets/theme/sun.svg" alt="Sun Icon" />
-                <img class="moon" src="assets/theme/moon.svg" alt="Moon Icon" />
-              </label>
-            </li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Applet</title>
+  <link rel="icon" href="assets/icon/icon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ========================= -->
+  <!--         HEADER            -->
+  <!-- ========================= -->
+  <header class="header container" id="header">
+    <div class="header-content">
+      <div class="logo">
+        <a href="#">
+          <div class="icon">
+            <img src="assets/icon/icon.svg" alt="Applet Icon" />
+            <span class="applet">Applet</span>
+          </div>
+        </a>
+      </div>
+      <!-- ========================= -->
+      <!--         NAVIGATION        -->
+      <!-- ========================= -->
+      <nav class="navigation">
+        <ul class="menu-box">
+          <li><a class="menu-item" href="#about">About</a></li>
+          <li><a class="menu-item" href="#projects">Projects</a></li>
+          <li><a class="menu-item" href="#faq">FAQ</a></li>
+          <li><a class="menu-item" href="#contacts">Contacts</a></li>
+          <li>
+            <input type="checkbox" id="theme-toggle" />
+            <label for="theme-toggle" class="theme-switch">
+              <img class="sun" src="assets/theme/sun.svg" alt="Sun Icon" />
+              <img class="moon" src="assets/theme/moon.svg" alt="Moon Icon" />
+            </label>
+          </li>
+        </ul>
+      </nav>
+
+      <!--FOR MOBILE-->
+      <nav class="mobile-nav">
+        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox" />
+        <label for="mobile-menu-toggle" class="mobile-menu-button">
+          <span class="mobile-menu-icon"></span>
+        </label>
+
+        <div class="mobile-menu-container">
+          <ul class="mobile-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contacts">Contacts</a></li>
           </ul>
-        </nav>
 
-        <!--FOR MOBILE-->
-        <nav class="mobile-nav">
-          <input
-            type="checkbox"
-            id="mobile-menu-toggle"
-            class="mobile-menu-checkbox"
-          />
-          <label for="mobile-menu-toggle" class="mobile-menu-button">
-            <span class="mobile-menu-icon"></span>
-          </label>
-
-          <div class="mobile-menu-container">
-            <ul class="mobile-menu">
-              <li><a href="#about">About</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="#contacts">Contacts</a></li>
-            </ul>
-
-            <div class="mobile-menu-footer">
-              <div class="mobile-social">
-                <a href="https://www.threads.net/" target="_blank"
-                  ><svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+          <div class="mobile-menu-footer">
+            <div class="mobile-social">
+              <a href="https://www.threads.net/" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M15.9455 23L10.396 15.0901L3.44886 23H0.509766L9.09209 13.2311L0.509766 1H8.05571L13.286 8.45502L19.8393 1H22.7784L14.5943 10.3165L23.4914 23H15.9455ZM19.2185 20.77H17.2398L4.71811 3.23H6.6971L11.7121 10.2532L12.5793 11.4719L19.2185 20.77Z"
+                    fill="#E9D7FE" />
+                </svg>
+              </a>
+              <a href="https://ru.linkedin.com/" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_4064_3971)">
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M15.9455 23L10.396 15.0901L3.44886 23H0.509766L9.09209 13.2311L0.509766 1H8.05571L13.286 8.45502L19.8393 1H22.7784L14.5943 10.3165L23.4914 23H15.9455ZM19.2185 20.77H17.2398L4.71811 3.23H6.6971L11.7121 10.2532L12.5793 11.4719L19.2185 20.77Z"
-                      fill="#E9D7FE"
-                    />
-                  </svg>
-                </a>
-                <a href="https://ru.linkedin.com/" target="_blank"
-                  ><svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_4064_3971)">
-                      <path
-                        d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z"
-                        fill="#E9D7FE"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_4064_3971">
-                        <rect width="24" height="24" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </a>
-                <a href="https://www.facebook.com/?locale=ru_RU" target="_blank"
-                  ><svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_4064_3974)">
-                      <path
-                        d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
-                        fill="#E9D7FE"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_4064_3974">
-                        <rect width="24" height="24" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </a>
-                <a href="https://github.com/" target="_blank"
-                  ><svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_4064_3976)">
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12 0C5.3724 0 0 5.3808 0 12.0204C0 17.3304 3.438 21.8364 8.2068 23.4252C8.8068 23.5356 9.0252 23.1648 9.0252 22.8456C9.0252 22.5612 9.0156 21.804 9.0096 20.802C5.6712 21.528 4.9668 19.1904 4.9668 19.1904C4.422 17.8008 3.6348 17.4312 3.6348 17.4312C2.5452 16.6872 3.7176 16.7016 3.7176 16.7016C4.9212 16.7856 5.5548 17.94 5.5548 17.94C6.6252 19.776 8.364 19.2456 9.0468 18.9384C9.1572 18.162 9.4668 17.6328 9.81 17.3328C7.146 17.0292 4.344 15.9972 4.344 11.3916C4.344 10.08 4.812 9.006 5.5788 8.166C5.4552 7.8624 5.0436 6.6396 5.6964 4.986C5.6964 4.986 6.7044 4.662 8.9964 6.2172C9.97532 5.95022 10.9853 5.81423 12 5.8128C13.02 5.8176 14.046 5.9508 15.0048 6.2172C17.2956 4.662 18.3012 4.9848 18.3012 4.9848C18.9564 6.6396 18.5436 7.8624 18.4212 8.166C19.1892 9.006 19.6548 10.08 19.6548 11.3916C19.6548 16.0092 16.848 17.0256 14.1756 17.3232C14.6064 17.694 14.9892 18.4272 14.9892 19.5492C14.9892 21.1548 14.9748 22.452 14.9748 22.8456C14.9748 23.1672 15.1908 23.5416 15.8004 23.424C18.19 22.6225 20.2672 21.0904 21.7386 19.0441C23.2099 16.9977 24.001 14.5408 24 12.0204C24 5.3808 18.6264 0 12 0Z"
-                        fill="#E9D7FE"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_4064_3976">
-                        <rect width="24" height="24" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </a>
-                <div class="theme-switcher">
-                  <input type="checkbox" id="theme-toggle" />
-                  <label for="theme-toggle" class="theme-switch">
-                    <img
-                      class="sun"
-                      src="assets/theme/sun.svg"
-                      alt="Sun Icon"
-                    />
-                    <img
-                      class="moon"
-                      src="assets/theme/moon.svg"
-                      alt="Moon Icon"
-                    />
-                  </label>
-                  <!-- Ваш переключатель темы -->
-                </div>
+                      d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z"
+                      fill="#E9D7FE" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_4064_3971">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/?locale=ru_RU" target="_blank"><svg width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_4064_3974)">
+                    <path
+                      d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
+                      fill="#E9D7FE" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_4064_3974">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+              <a href="https://github.com/" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_4064_3976)">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 0C5.3724 0 0 5.3808 0 12.0204C0 17.3304 3.438 21.8364 8.2068 23.4252C8.8068 23.5356 9.0252 23.1648 9.0252 22.8456C9.0252 22.5612 9.0156 21.804 9.0096 20.802C5.6712 21.528 4.9668 19.1904 4.9668 19.1904C4.422 17.8008 3.6348 17.4312 3.6348 17.4312C2.5452 16.6872 3.7176 16.7016 3.7176 16.7016C4.9212 16.7856 5.5548 17.94 5.5548 17.94C6.6252 19.776 8.364 19.2456 9.0468 18.9384C9.1572 18.162 9.4668 17.6328 9.81 17.3328C7.146 17.0292 4.344 15.9972 4.344 11.3916C4.344 10.08 4.812 9.006 5.5788 8.166C5.4552 7.8624 5.0436 6.6396 5.6964 4.986C5.6964 4.986 6.7044 4.662 8.9964 6.2172C9.97532 5.95022 10.9853 5.81423 12 5.8128C13.02 5.8176 14.046 5.9508 15.0048 6.2172C17.2956 4.662 18.3012 4.9848 18.3012 4.9848C18.9564 6.6396 18.5436 7.8624 18.4212 8.166C19.1892 9.006 19.6548 10.08 19.6548 11.3916C19.6548 16.0092 16.848 17.0256 14.1756 17.3232C14.6064 17.694 14.9892 18.4272 14.9892 19.5492C14.9892 21.1548 14.9748 22.452 14.9748 22.8456C14.9748 23.1672 15.1908 23.5416 15.8004 23.424C18.19 22.6225 20.2672 21.0904 21.7386 19.0441C23.2099 16.9977 24.001 14.5408 24 12.0204C24 5.3808 18.6264 0 12 0Z"
+                      fill="#E9D7FE" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_4064_3976">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+              <div class="theme-switcher">
+                <input type="checkbox" id="theme-toggle" />
+                <label for="theme-toggle" class="theme-switch">
+                  <img class="sun" src="assets/theme/sun.svg" alt="Sun Icon" />
+                  <img class="moon" src="assets/theme/moon.svg" alt="Moon Icon" />
+                </label>
+                <!-- Ваш переключатель темы -->
               </div>
             </div>
           </div>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <!-- ========================= -->
-      <!--         HERO SECTION      -->
-      <!-- ========================= -->
-      <section class="hero container" id="hero">
-        <div class="hero-content">
-          <div class="hero-with-btn">
-            <div class="hero-text">
-              <h1 class="hero-title">
-                Custom Digital Solutions for Ambitious Brands
-              </h1>
-              <p class="hero-p">
-                Tailoring approaches to unique needs, transforming ideas into
-                exceptional digital experiences.
-              </p>
-            </div>
-            <div class="hero-btns">
-              <button
-                type="button"
-                class="contact-button"
-                onclick="location.href='#contacts'"
-              >
-                Contact Us
-              </button>
-              <button
-                type="button"
-                class="projects-button"
-                onclick="location.href='#projects'"
-              >
-                Projects
-              </button>
-            </div>
-          </div>
-          <div class="hero-img">
-            <img src="assets/hero/officeView.png" alt="View Office" />
-          </div>
         </div>
-      </section>
-      <!-- ========================= -->
-      <!--           ABOUT           -->
-      <!-- ========================= -->
-      <section class="about container" id="about">
-        <div class="about-content">
-          <div class="about-header">
-            <h3 class="about-h3">Who we are</h3>
-            <h2 class="about-h2">Our Guiding Principles</h2>
-            <p class="about-p">
-              We focus on what truly matters. Whether shaping workflows, making
-              key decisions, or growing our team, these principles define
-              everything we do.
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================= -->
+    <!--         HERO SECTION      -->
+    <!-- ========================= -->
+    <section class="hero container" id="hero">
+      <div class="hero-content">
+        <div class="hero-with-btn">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              Custom Digital Solutions for Ambitious Brands
+            </h1>
+            <p class="hero-p">
+              Tailoring approaches to unique needs, transforming ideas into
+              exceptional digital experiences.
             </p>
           </div>
-          <div class="about-cards">
-            <figure class="about-card">
-              <img
-                src="assets/about/smileAbout.svg"
-                alt="Smile Icon for About"
-              />
-              <figcaption class="about-icon">
-                <h3>Empower Our Team</h3>
-                <p>
-                  Recognize what drives our people. Provide the tools and
-                  support they need to thrive.
-                </p>
-              </figcaption>
-            </figure>
-            <figure class="about-card">
-              <img
-                src="assets/about/heartAbout.svg"
-                alt="Heart Icon for About"
-              />
-              <figcaption class="about-icon">
-                <h3>Support and Elevate Each Other</h3>
-                <p>
-                  Collaboration over competition. Growth comes from honesty,
-                  respect, and shared success.
-                </p>
-              </figcaption>
-            </figure>
-            <figure class="about-card">
-              <img
-                src="assets/about/miracleAbout.svg"
-                alt="Miracle Icon for About"
-              />
-              <figcaption class="about-icon">
-                <h3>Take Pride in Excellence</h3>
-                <p>
-                  Commit to quality in every project. Deliver nothing but the
-                  best—every time.
-                </p>
-              </figcaption>
-            </figure>
-            <figure class="about-card">
-              <img
-                src="assets/about/messageAbout.svg"
-                alt="Message Icon for About"
-              />
-              <figcaption class="about-icon">
-                <h3>Put Customers First</h3>
-                <p>
-                  Listen, understand, and exceed expectations. Their success is
-                  our success.
-                </p>
-              </figcaption>
-            </figure>
-            <figure class="about-card">
-              <img src="assets/about/flagAbout.svg" alt="Flag Icon for About" />
-              <figcaption class="about-icon">
-                <h3>Challenge the Impossible</h3>
-                <p>
-                  Embrace complexity. Seek innovation. Boldly ask “What if?” and
-                  turn it into “Why not?”
-                </p>
-              </figcaption>
-            </figure>
-            <figure class="about-card">
-              <img
-                src="assets/about/radarAbout.svg"
-                alt="Radar Icon for About"
-              />
-              <figcaption class="about-icon">
-                <h3>Master the Details</h3>
-                <p>
-                  Excellence is in the little things. Every detail counts in
-                  building something remarkable.
-                </p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-      <!-- ========================= -->
-      <!--          SLIDER           -->
-      <!-- ========================= -->
-      <section class="slider container">
-        <div class="slider-content"></div>
-      </section>
-      <!-- ========================= -->
-      <!--          PROJECTS         -->
-      <!-- ========================= -->
-      <section class="projects container" id="projects">
-        <div class="projects-content">
-          <div class="projects-header">
-            <div class="projects-content-with-p">
-              <h3 class="projects-h3">Latest projects</h3>
-              <h2 class="projects-h2">Innovations we’re proud of</h2>
-            </div>
-            <p class="projects-p">
-              Explore our portfolio of innovative, tailored solutions delivering
-              exceptional results for our clients.
-            </p>
-          </div>
-
-          <div class="projects-articles"></div>
-
-          <div class="projects-Btn">
-            <button
-              class="projects-view-Btn"
-              onclick="location.href='index1.html'"
-            >
-              View all projects
+          <div class="hero-btns">
+            <button type="button" class="contact-button" onclick="location.href='#contacts'">
+              Contact Us
+            </button>
+            <button type="button" class="projects-button" onclick="location.href='#projects'">
+              Projects
             </button>
           </div>
         </div>
-      </section>
-      <!-- ========================= -->
-      <!--            FAQ            -->
-      <!-- ========================= -->
-      <section class="faq container" id="faq">
-        <div class="faq-content">
-          <div class="faq-header">
-            <h2 class="faq-h2">Frequently asked questions</h2>
-            <p class="faq-p">
-              Answers to the most common questions about our services and
-              processes.
-            </p>
-          </div>
-          <div class="faq-info"></div>
-        </div>
-      </section>
-      <!-- ========================= -->
-      <!--          CONTACTS         -->
-      <!-- ========================= -->
-      <section class="contacts container" id="contacts">
-        <div class="contacts-content">
-          <div class="contacts-header">
-            <h3 class="contacts-h3">Contact us</h3>
-            <h2 class="contacts-h2">Let’s build something great together</h2>
-            <p class="contacts-p">
-              Have a project in mind? Reach out, and let’s bring your ideas to
-              life.
-            </p>
-          </div>
-          <div class="contacts-info">
-            <figure class="contacts-card">
-              <img src="assets/contactUs/messageAbout.svg" alt="Message Icon" />
-              <figcaption class="contacts-card-info">
-                <h3>Email us</h3>
-                <p>For inquiries, contact us.</p>
-                <a href="mailto:info@applet.com">info@applet.com</a>
-              </figcaption>
-            </figure>
-            <figure class="contacts-card">
-              <img
-                src="assets/contactUs/conversContacts.svg"
-                alt="Conversation Icon"
-              />
-              <figcaption class="contacts-card-info">
-                <h3>Chat with us</h3>
-                <p>Get quick replies.</p>
-                <div>
-                  <a href="mailto:support@applet.com" target="_blank"
-                    >support@applet.com</a
-                  >
-                </div>
-              </figcaption>
-            </figure>
-            <figure class="contacts-card">
-              <img
-                src="assets/contactUs/locationContacts.svg"
-                alt="Location Icon"
-              />
-              <figcaption class="contacts-card-info">
-                <h3>Visit us</h3>
-                <p>Visit our office HQ.</p>
-                <a
-                  href="https://maps.google.com/?q=123%20Innovation%20Street,%20San%20Francisco,%20CA%2094105"
-                  target="_blank"
-                  rel="noopener"
-                  >123 Innovation Street, San Francisco, CA 94105</a
-                >
-              </figcaption>
-            </figure>
-            <figure class="contacts-card">
-              <img src="assets/contactUs/phoneContacts.svg" alt="Phone Icon" />
-              <figcaption class="contacts-card-info">
-                <h3>Call us</h3>
-                <p>Mon–Fri, 9 AM – 6 PM.</p>
-                <a href="tel:+14151234567" target="_blank">+1 (415) 123-4567</a>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-      <button id="myBtn" title="Go to top">
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10.0005 3.41406L5.29349 8.12106C4.90249 8.51206 4.90249 9.14406 5.29349 9.53506C5.68449 9.92606 6.31649 9.92606 6.70749 9.53506L9.00049 7.24206V14.8281C9.00049 15.3801 9.44749 15.8281 10.0005 15.8281C10.5535 15.8281 11.0005 15.3801 11.0005 14.8281V7.24206L13.2935 9.53506C13.4885 9.73006 13.7445 9.82806 14.0005 9.82806C14.2565 9.82806 14.5125 9.73006 14.7075 9.53506C15.0985 9.14406 15.0985 8.51206 14.7075 8.12106L10.0005 3.41406Z"
-            fill="#414651"
-          />
-        </svg>
-      </button>
-    </main>
-    <!-- ========================= -->
-    <!--          FOOTER           -->
-    <!-- ========================= -->
-    <footer class="footer container" id="footer  ">
-      <div class="footer-content">
-        <div class="footer-info">
-          <p>© 2025 Applet. All rights reserved.</p>
-        </div>
-        <div class="footer-social">
-          <a href="https://www.threads.net/" target="_blank"
-            ><svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M15.9455 23L10.396 15.0901L3.44886 23H0.509766L9.09209 13.2311L0.509766 1H8.05571L13.286 8.45502L19.8393 1H22.7784L14.5943 10.3165L23.4914 23H15.9455ZM19.2185 20.77H17.2398L4.71811 3.23H6.6971L11.7121 10.2532L12.5793 11.4719L19.2185 20.77Z"
-                fill="#E9D7FE"
-              />
-            </svg>
-          </a>
-          <a href="https://ru.linkedin.com/" target="_blank"
-            ><svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_4064_3971)">
-                <path
-                  d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z"
-                  fill="#E9D7FE"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_4064_3971">
-                  <rect width="24" height="24" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
-          <a href="https://www.facebook.com/?locale=ru_RU" target="_blank"
-            ><svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_4064_3974)">
-                <path
-                  d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
-                  fill="#E9D7FE"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_4064_3974">
-                  <rect width="24" height="24" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
-          <a href="https://github.com/" target="_blank"
-            ><svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_4064_3976)">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12 0C5.3724 0 0 5.3808 0 12.0204C0 17.3304 3.438 21.8364 8.2068 23.4252C8.8068 23.5356 9.0252 23.1648 9.0252 22.8456C9.0252 22.5612 9.0156 21.804 9.0096 20.802C5.6712 21.528 4.9668 19.1904 4.9668 19.1904C4.422 17.8008 3.6348 17.4312 3.6348 17.4312C2.5452 16.6872 3.7176 16.7016 3.7176 16.7016C4.9212 16.7856 5.5548 17.94 5.5548 17.94C6.6252 19.776 8.364 19.2456 9.0468 18.9384C9.1572 18.162 9.4668 17.6328 9.81 17.3328C7.146 17.0292 4.344 15.9972 4.344 11.3916C4.344 10.08 4.812 9.006 5.5788 8.166C5.4552 7.8624 5.0436 6.6396 5.6964 4.986C5.6964 4.986 6.7044 4.662 8.9964 6.2172C9.97532 5.95022 10.9853 5.81423 12 5.8128C13.02 5.8176 14.046 5.9508 15.0048 6.2172C17.2956 4.662 18.3012 4.9848 18.3012 4.9848C18.9564 6.6396 18.5436 7.8624 18.4212 8.166C19.1892 9.006 19.6548 10.08 19.6548 11.3916C19.6548 16.0092 16.848 17.0256 14.1756 17.3232C14.6064 17.694 14.9892 18.4272 14.9892 19.5492C14.9892 21.1548 14.9748 22.452 14.9748 22.8456C14.9748 23.1672 15.1908 23.5416 15.8004 23.424C18.19 22.6225 20.2672 21.0904 21.7386 19.0441C23.2099 16.9977 24.001 14.5408 24 12.0204C24 5.3808 18.6264 0 12 0Z"
-                  fill="#E9D7FE"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_4064_3976">
-                  <rect width="24" height="24" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
+        <div class="hero-img">
+          <img src="assets/hero/officeView.png" alt="View Office" />
         </div>
       </div>
-    </footer>
-    <script defer type="module" src="js/main.js"></script>
-  </body>
+    </section>
+    <!-- ========================= -->
+    <!--           ABOUT           -->
+    <!-- ========================= -->
+    <section class="about container" id="about">
+      <div class="about-content">
+        <div class="about-header">
+          <h3 class="about-h3">Who we are</h3>
+          <h2 class="about-h2">Our Guiding Principles</h2>
+          <p class="about-p">
+            We focus on what truly matters. Whether shaping workflows, making
+            key decisions, or growing our team, these principles define
+            everything we do.
+          </p>
+        </div>
+        <div class="about-cards">
+          <figure class="about-card">
+            <img src="assets/about/smileAbout.svg" alt="Smile Icon for About" />
+            <figcaption class="about-icon">
+              <h3>Empower Our Team</h3>
+              <p>
+                Recognize what drives our people. Provide the tools and
+                support they need to thrive.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="about-card">
+            <img src="assets/about/heartAbout.svg" alt="Heart Icon for About" />
+            <figcaption class="about-icon">
+              <h3>Support and Elevate Each Other</h3>
+              <p>
+                Collaboration over competition. Growth comes from honesty,
+                respect, and shared success.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="about-card">
+            <img src="assets/about/miracleAbout.svg" alt="Miracle Icon for About" />
+            <figcaption class="about-icon">
+              <h3>Take Pride in Excellence</h3>
+              <p>
+                Commit to quality in every project. Deliver nothing but the
+                best—every time.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="about-card">
+            <img src="assets/about/messageAbout.svg" alt="Message Icon for About" />
+            <figcaption class="about-icon">
+              <h3>Put Customers First</h3>
+              <p>
+                Listen, understand, and exceed expectations. Their success is
+                our success.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="about-card">
+            <img src="assets/about/flagAbout.svg" alt="Flag Icon for About" />
+            <figcaption class="about-icon">
+              <h3>Challenge the Impossible</h3>
+              <p>
+                Embrace complexity. Seek innovation. Boldly ask “What if?” and
+                turn it into “Why not?”
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="about-card">
+            <img src="assets/about/radarAbout.svg" alt="Radar Icon for About" />
+            <figcaption class="about-icon">
+              <h3>Master the Details</h3>
+              <p>
+                Excellence is in the little things. Every detail counts in
+                building something remarkable.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- ========================= -->
+    <!--          SLIDER           -->
+    <!-- ========================= -->
+    <section class="slider container">
+      <div class="slider-content"></div>
+    </section>
+    <!-- ========================= -->
+    <!--          PROJECTS         -->
+    <!-- ========================= -->
+    <section class="projects container" id="projects">
+      <div class="projects-content">
+        <div class="projects-header">
+          <div class="projects-content-with-p">
+            <h3 class="projects-h3">Latest projects</h3>
+            <h2 class="projects-h2">Innovations we’re proud of</h2>
+          </div>
+          <p class="projects-p">
+            Explore our portfolio of innovative, tailored solutions delivering
+            exceptional results for our clients.
+          </p>
+        </div>
+
+        <div class="projects-articles"></div>
+
+        <div class="projects-Btn">
+          <button class="projects-view-Btn" onclick="location.href='index1.html'">
+            View all projects
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ========================= -->
+    <!--            FAQ            -->
+    <!-- ========================= -->
+    <section class="faq container" id="faq">
+      <div class="faq-content">
+        <div class="faq-header">
+          <h2 class="faq-h2">Frequently asked questions</h2>
+          <p class="faq-p">
+            Answers to the most common questions about our services and
+            processes.
+          </p>
+        </div>
+        <div class="faq-info"></div>
+      </div>
+    </section>
+    <!-- ========================= -->
+    <!--          CONTACTS         -->
+    <!-- ========================= -->
+    <section class="contacts container" id="contacts">
+      <div class="contacts-content">
+        <div class="contacts-header">
+          <h3 class="contacts-h3">Contact us</h3>
+          <h2 class="contacts-h2">Let’s build something great together</h2>
+          <p class="contacts-p">
+            Have a project in mind? Reach out, and let’s bring your ideas to
+            life.
+          </p>
+        </div>
+        <div class="contacts-info">
+          <figure class="contacts-card">
+            <img src="assets/contactUs/messageAbout.svg" alt="Message Icon" />
+            <figcaption class="contacts-card-info">
+              <h3>Email us</h3>
+              <p>For inquiries, contact us.</p>
+              <a href="mailto:info@applet.com">info@applet.com</a>
+            </figcaption>
+          </figure>
+          <figure class="contacts-card">
+            <img src="assets/contactUs/conversContacts.svg" alt="Conversation Icon" />
+            <figcaption class="contacts-card-info">
+              <h3>Chat with us</h3>
+              <p>Get quick replies.</p>
+              <div>
+                <a href="mailto:support@applet.com" target="_blank">support@applet.com</a>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="contacts-card">
+            <img src="assets/contactUs/locationContacts.svg" alt="Location Icon" />
+            <figcaption class="contacts-card-info">
+              <h3>Visit us</h3>
+              <p>Visit our office HQ.</p>
+              <a href="https://maps.google.com/?q=123%20Innovation%20Street,%20San%20Francisco,%20CA%2094105"
+                target="_blank" rel="noopener">123 Innovation Street, San Francisco, CA 94105</a>
+            </figcaption>
+          </figure>
+          <figure class="contacts-card">
+            <img src="assets/contactUs/phoneContacts.svg" alt="Phone Icon" />
+            <figcaption class="contacts-card-info">
+              <h3>Call us</h3>
+              <p>Mon–Fri, 9 AM – 6 PM.</p>
+              <a href="tel:+14151234567" target="_blank">+1 (415) 123-4567</a>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <button id="myBtn" title="Go to top">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M10.0005 3.41406L5.29349 8.12106C4.90249 8.51206 4.90249 9.14406 5.29349 9.53506C5.68449 9.92606 6.31649 9.92606 6.70749 9.53506L9.00049 7.24206V14.8281C9.00049 15.3801 9.44749 15.8281 10.0005 15.8281C10.5535 15.8281 11.0005 15.3801 11.0005 14.8281V7.24206L13.2935 9.53506C13.4885 9.73006 13.7445 9.82806 14.0005 9.82806C14.2565 9.82806 14.5125 9.73006 14.7075 9.53506C15.0985 9.14406 15.0985 8.51206 14.7075 8.12106L10.0005 3.41406Z"
+          fill="#414651" />
+      </svg>
+    </button>
+  </main>
+  <!-- ========================= -->
+  <!--          FOOTER           -->
+  <!-- ========================= -->
+  <footer class="footer container" id="footer  ">
+    <div class="footer-content">
+      <div class="footer-info">
+        <p>© 2025 Applet. All rights reserved.</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.threads.net/" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M15.9455 23L10.396 15.0901L3.44886 23H0.509766L9.09209 13.2311L0.509766 1H8.05571L13.286 8.45502L19.8393 1H22.7784L14.5943 10.3165L23.4914 23H15.9455ZM19.2185 20.77H17.2398L4.71811 3.23H6.6971L11.7121 10.2532L12.5793 11.4719L19.2185 20.77Z"
+              fill="#E9D7FE" />
+          </svg>
+        </a>
+        <a href="https://ru.linkedin.com/" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_4064_3971)">
+              <path
+                d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z"
+                fill="#E9D7FE" />
+            </g>
+            <defs>
+              <clipPath id="clip0_4064_3971">
+                <rect width="24" height="24" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/?locale=ru_RU" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_4064_3974)">
+              <path
+                d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
+                fill="#E9D7FE" />
+            </g>
+            <defs>
+              <clipPath id="clip0_4064_3974">
+                <rect width="24" height="24" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="https://github.com/" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_4064_3976)">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 0C5.3724 0 0 5.3808 0 12.0204C0 17.3304 3.438 21.8364 8.2068 23.4252C8.8068 23.5356 9.0252 23.1648 9.0252 22.8456C9.0252 22.5612 9.0156 21.804 9.0096 20.802C5.6712 21.528 4.9668 19.1904 4.9668 19.1904C4.422 17.8008 3.6348 17.4312 3.6348 17.4312C2.5452 16.6872 3.7176 16.7016 3.7176 16.7016C4.9212 16.7856 5.5548 17.94 5.5548 17.94C6.6252 19.776 8.364 19.2456 9.0468 18.9384C9.1572 18.162 9.4668 17.6328 9.81 17.3328C7.146 17.0292 4.344 15.9972 4.344 11.3916C4.344 10.08 4.812 9.006 5.5788 8.166C5.4552 7.8624 5.0436 6.6396 5.6964 4.986C5.6964 4.986 6.7044 4.662 8.9964 6.2172C9.97532 5.95022 10.9853 5.81423 12 5.8128C13.02 5.8176 14.046 5.9508 15.0048 6.2172C17.2956 4.662 18.3012 4.9848 18.3012 4.9848C18.9564 6.6396 18.5436 7.8624 18.4212 8.166C19.1892 9.006 19.6548 10.08 19.6548 11.3916C19.6548 16.0092 16.848 17.0256 14.1756 17.3232C14.6064 17.694 14.9892 18.4272 14.9892 19.5492C14.9892 21.1548 14.9748 22.452 14.9748 22.8456C14.9748 23.1672 15.1908 23.5416 15.8004 23.424C18.19 22.6225 20.2672 21.0904 21.7386 19.0441C23.2099 16.9977 24.001 14.5408 24 12.0204C24 5.3808 18.6264 0 12 0Z"
+                fill="#E9D7FE" />
+            </g>
+            <defs>
+              <clipPath id="clip0_4064_3976">
+                <rect width="24" height="24" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script defer type="module" src="js/main.js"></script>
+</body>
+
 </html>
